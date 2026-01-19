@@ -39,22 +39,6 @@
     },
     "1719248777287cbeff": {
       "type": "apps",
-      "blocks": {
-        "wa_simple_bundles_section_wa_simple_bundles_QMrxWi": {
-          "type": "shopify://apps/wa-simple-bundles/blocks/section-wa_simple_bundles/b48130ac-a8f4-4b64-aaa1-5cb4c215ae37",
-          "settings": {
-            "custom_design": false,
-            "bundle_id": "WY9OzaNr0v",
-            "bundletitle": true,
-            "productname": true,
-            "productcheck": true,
-            "productqty": true
-          }
-        }
-      },
-      "block_order": [
-        "wa_simple_bundles_section_wa_simple_bundles_QMrxWi"
-      ],
       "settings": {
         "include_margins": true
       }
