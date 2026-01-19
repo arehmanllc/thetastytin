@@ -1,0 +1,205 @@
+{{ 'marquee-section.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'marquee-section.js' | asset_url }}" defer="defer"></script>
+
+{%- style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle %}
+
+<div class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+  <marquee-section
+    id="marquee-{{ section.id }}"
+    class="marquee{% if section.settings.autoplay %} marquee--autoplay{% endif %}"
+    data-autoplay="{{ section.settings.autoplay }}"
+  >
+    <div class="marquee-grid">
+      {% for i in (1..8) %}
+        <div class="marquee-list">
+          {% for block in section.blocks %}
+            <div class="marquee-list__item">
+              {% if block.settings.icon != blank %}
+                <img
+                  src="{{ block.settings.icon | image_url }}"
+                  alt="{{ block.settings.text }}"
+                  class="marquee__icon"
+                  height="40"
+                  width="40"
+                  loading="lazy"
+                >
+              {% endif %}
+              <h2 class="marquee-text {{ section.settings.font_heading_family }} {{ section.settings.font_weight }} {% if block.settings.enable_icon == true %} h3{% else %} {{ section.settings.heading_size }}{% endif %}">
+                {{ block.settings.text }}
+              </h2>
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </marquee-section>
+</div>
+
+{% schema %}
+{
+  "name": "Marquee Section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-3"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Enable Infinite Autoplay",
+      "default": true,
+      "info": "If unchecked, the marquee will move on scroll when in viewport."
+    },
+    {
+      "type": "select",
+      "id": "font_heading_family",
+      "label": "Font heading family",
+      "options": [
+        {
+          "label": "body",
+          "value": "f-body"
+        },
+        {
+          "label": "heading",
+          "value": "f-head"
+        }
+      ],
+      "default": "f-body"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Font size",
+      "default": "f-20",
+      "options": [
+        { "value": "h0", "label": "H0" },
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "f-8", "label": "0.8rem" },
+        { "value": "f-10", "label": "1rem" },
+        { "value": "f-11", "label": "1.1rem" },
+        { "value": "f-12", "label": "1.2rem" },
+        { "value": "f-13", "label": "1.3rem" },
+        { "value": "f-14", "label": "1.4rem" },
+        { "value": "f-15", "label": "1.5rem" },
+        { "value": "f-16", "label": "1.6rem" },
+        { "value": "f-18", "label": "1.8rem" },
+        { "value": "f-20", "label": "2rem" },
+        { "value": "f-24", "label": "2.4rem" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font Weight",
+      "options": [
+        { "label": "100 (Thin)", "value": "b-100" },
+        { "label": "200 (Extra Light)", "value": "b-200" },
+        { "label": "300 (Light)", "value": "b-300" },
+        { "label": "400 (Normal)", "value": "b-400" },
+        { "label": "500 (Medium)", "value": "b-500" },
+        { "label": "600 (Semi Bold)", "value": "b-600" },
+        { "label": "700 (Bold)", "value": "b-700" }
+      ],
+      "default": "b-300"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top mobile",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Bottom mobile",
+      "default": 13
+    }
+  ],
+  "blocks": [
+    {
+      "type": "marquee_item",
+      "name": "Marquee Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon Image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Marquee Item"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_icon",
+          "label": "enable icon",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee Section",
+      "blocks": [
+        {
+          "type": "marquee_item"
+        },
+        {
+          "type": "marquee_item"
+        },
+        {
+          "type": "marquee_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

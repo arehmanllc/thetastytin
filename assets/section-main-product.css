@@ -84,7 +84,8 @@
 /* Dynamic checkout */
 
 .shopify-payment-button__button {
-  font-family: inherit;
+  /* font-family: inherit; */
+  font-family: var(--font-body-family-Suisse);
   min-height: 4.6rem;
 }
 
