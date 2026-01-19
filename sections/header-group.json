@@ -11,55 +11,59 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "4d30b704-6438-4f45-a9e7-044e23329ed3": {
-      "type": "TEN12-announcement-bar",
+    "marquee_r6zb3N": {
+      "type": "marquee",
       "blocks": {
-        "announcement_6EtB68": {
-          "type": "announcement",
+        "marquee_item_xdeUa3": {
+          "type": "marquee_item",
           "settings": {
-            "text": "✹Garlic Dust Shaker now $10 – Limited time ✹Garlic Dust Shaker now $10 – Limited time ✹Garlic Dust Shaker now $10 – Limited time ✹Garlic Dust Shaker now $10 – Limited time ✹Garlic Dust Shaker now $10 – Limited time ✹Garlic Dust Shaker now $10 – Limited time ✹Garlic Dust Shaker now $10 – Limited time ✹Garlic Dust Shaker now $10 – Limited time ✹Garlic Dust Shaker now $10 – Limited time ✹Garlic Dust Shaker now $10 – Limited time ✹Garlic Dust Shaker now $10 – Limited time ✹Garlic Dust Shaker now $10 – Limited time"
+            "icon": "shopify://shop_images/Vector_1.svg",
+            "text": "Free shipping $40+",
+            "enable_icon": false
           }
         },
-        "sections--20634953417025__4d30b704-6438-4f45-a9e7-044e23329ed3-announcement-1": {
-          "type": "announcement",
-          "disabled": true,
+        "marquee_item_iTUG6A": {
+          "type": "marquee_item",
           "settings": {
-            "text": "♡🎁 Holiday Sale: 20% Off Gift Bundles with Code HOLIDAY20 🎁 Holiday Sale: 20% Off Gift Bundles with Code HOLIDAY20 🎁 Holiday Sale: 20% Off Gift Bundles with Code HOLIDAY20 🎁 Holiday Sale: 20% Off Gift Bundles with Code HOLIDAY20 🎁♡"
+            "icon": "shopify://shop_images/Vector_2.svg",
+            "text": "Garlic Dust Shaker now $10",
+            "enable_icon": false
           }
         },
-        "b9437925-1a5f-4cfc-9e20-8db9f8e5aba9": {
-          "type": "announcement",
-          "disabled": true,
+        "marquee_item_LhnKUC": {
+          "type": "marquee_item",
           "settings": {
-            "text": "✹HAPPY HOLIDAYS✹ 🎁 The Tasty Tin Family will be on holiday hiatus until January 6, 2025 !  Wishing you and yours a joyous holiday season🎁"
+            "icon": "shopify://shop_images/Vector_1.svg",
+            "text": "Free shipping $40+",
+            "enable_icon": false
           }
         },
-        "65e799d6-ae32-4a3c-bb41-e576f4fca899": {
-          "type": "announcement",
-          "disabled": true,
+        "marquee_item_AGEGKU": {
+          "type": "marquee_item",
           "settings": {
-            "text": "♡ Free Shipping on orders over $50♡"
-          }
-        },
-        "announcement_hDjR3W": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "✹ Holiday Gift Sets are  BACK with FREE SHIPPING ✹"
+            "icon": "shopify://shop_images/Vector_2.svg",
+            "text": "Garlic Dust Shaker now $10",
+            "enable_icon": false
           }
         }
       },
       "block_order": [
-        "announcement_6EtB68",
-        "sections--20634953417025__4d30b704-6438-4f45-a9e7-044e23329ed3-announcement-1",
-        "b9437925-1a5f-4cfc-9e20-8db9f8e5aba9",
-        "65e799d6-ae32-4a3c-bb41-e576f4fca899",
-        "announcement_hDjR3W"
+        "marquee_item_xdeUa3",
+        "marquee_item_iTUG6A",
+        "marquee_item_LhnKUC",
+        "marquee_item_AGEGKU"
       ],
+      "name": "Marquee Section",
       "settings": {
-        "color_scheme": "background-1",
-        "show_line_separator": true,
-        "collection": "gifts-under-100"
+        "color_scheme": "background-2",
+        "autoplay": true,
+        "font_heading_family": "f-body",
+        "heading_size": "h4",
+        "font_weight": "b-400",
+        "padding_top": 13,
+        "padding_top_mobile": 13,
+        "padding_bottom": 13,
+        "padding_bottom_mobile": 13
       }
     },
     "header": {
@@ -89,7 +93,7 @@
     }
   },
   "order": [
-    "4d30b704-6438-4f45-a9e7-044e23329ed3",
+    "marquee_r6zb3N",
     "header",
     "171924874931eccdb2"
   ]

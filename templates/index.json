@@ -14,9 +14,8 @@
       "blocks": {
         "heading": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "<em>Seasonings</em>For Everyday Cooking",
             "heading_size": "h0"
           }
         },
@@ -37,10 +36,9 @@
         "heading",
         "button"
       ],
-      "disabled": true,
       "settings": {
         "design-deeva-link": "shopify://collections",
-        "image": "shopify://shop_images/Banner-2.jpg",
+        "image": "shopify://shop_images/banner_3_1.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "desktop_content_position": "bottom-center",
@@ -68,6 +66,7 @@
       "block_order": [
         "text_pQatXC"
       ],
+      "disabled": true,
       "settings": {
         "design-deeva-link": "shopify://products/garlic-dust-seasoning-shaker",
         "image": "shopify://shop_images/Banner-1.jpg",

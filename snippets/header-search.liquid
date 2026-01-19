@@ -12,8 +12,11 @@
   <details>
     <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
       <span>
-        <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
+        {% comment %} <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
           <use href="#icon-search">
+        </svg> {% endcomment %}
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none">
+          <path d="M9.61056 8.94273C10.3909 7.99706 10.8838 6.78414 10.8838 5.44787C10.8838 2.4464 8.44004 0 5.44188 0C2.44371 0 0 2.4464 0 5.44787C0 8.44934 2.44371 10.8957 5.44188 10.8957C6.75614 10.8957 7.98827 10.4229 8.93289 9.62115L13.1632 13.8561C13.2659 13.9589 13.3891 14 13.5123 14C13.6355 14 13.7587 13.9589 13.8614 13.8561C14.0462 13.6711 14.0462 13.3421 13.8614 13.1571L9.61056 8.94273ZM5.42134 9.90896C2.9571 9.90896 0.965163 7.91483 0.965163 5.44787C0.965163 2.98091 2.9571 0.986784 5.42134 0.986784C7.88559 0.986784 9.87752 2.98091 9.87752 5.44787C9.87752 7.91483 7.88559 9.90896 5.42134 9.90896Z" fill="#0C0C0D"/>
         </svg>
         <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false">
           <use href="#icon-close">
@@ -57,9 +60,12 @@
                   </svg>
                 </button>
                 <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-                  <svg class="icon icon-search" aria-hidden="true" focusable="false">
+                  {% comment %} <svg class="icon icon-search" aria-hidden="true" focusable="false">
                     <use href="#icon-search">
-                  </svg>
+                  </svg> {% endcomment %}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none">
+<path d="M9.61056 8.94273C10.3909 7.99706 10.8838 6.78414 10.8838 5.44787C10.8838 2.4464 8.44004 0 5.44188 0C2.44371 0 0 2.4464 0 5.44787C0 8.44934 2.44371 10.8957 5.44188 10.8957C6.75614 10.8957 7.98827 10.4229 8.93289 9.62115L13.1632 13.8561C13.2659 13.9589 13.3891 14 13.5123 14C13.6355 14 13.7587 13.9589 13.8614 13.8561C14.0462 13.6711 14.0462 13.3421 13.8614 13.1571L9.61056 8.94273ZM5.42134 9.90896C2.9571 9.90896 0.965163 7.91483 0.965163 5.44787C0.965163 2.98091 2.9571 0.986784 5.42134 0.986784C7.88559 0.986784 9.87752 2.98091 9.87752 5.44787C9.87752 7.91483 7.88559 9.90896 5.42134 9.90896Z" fill="#0C0C0D"/>
+</svg>
                 </button>
               </div>
 
