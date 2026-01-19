@@ -1,0 +1,73 @@
+{% comment %}
+
+This file is controlled by the Recipes app by BentoSMB. If this file is edited, it will automatically be updated during the next save of your theme. 
+
+-----------------------------------------------------------------------------
+-------- DO NOT UPDATE THIS FILE DIRECTLY - ALL CHANGES WILL BE LOST --------
+-----------------------------------------------------------------------------
+
+{% endcomment %}
+
+{% comment %}--- Set variables global ---{% endcomment %}
+{% assign content = "" %}
+{% assign recipesPresent = false %}
+{% if template.name == 'page' %}
+    {% if page.content contains "[[ recipeID=" %}
+	    {% assign content = page.content | replace_first: '[[ recipeID=','#1#[[ recipeID=' %}
+        {% assign recipesPresent = true %}
+    {% endif %}
+{% elsif template.name == 'article' %}
+    {% if article.content contains "[[ recipeID=" %}
+        {% assign content = article.content | replace_first: '[[ recipeID=','#1#[[ recipeID=' %}
+        {% assign recipesPresent = true %}
+    {% endif %}
+{% endif %}
+
+{% comment %}--- Determine which recipes included, compare, and determine update required ---{% endcomment %}
+
+{% if recipesPresent == true %}
+    {% assign recipeIds = "" %}
+    {% assign contentSplit = content | split: '#1#[[ recipeID=' | last | split: "[[ recipeID=" %}
+    {% for string in contentSplit %}
+        {% assign recID = string | split: "," | first | strip_html %}
+        {% if forloop.first %}
+            {% assign recipeIds = recID %}
+        {% else %}
+            {% unless recipeIds contains recID %}
+                {% assign recipeIds = recipeIds | append: "," | append: recID %}
+            {% endunless %}
+        {% endif %}
+    {% endfor %}
+
+    {% assign recipeIDArray = recipeIds | split: "," %}
+
+    {% comment %}--- Create recipe objects, including the JSON-LD data ---{% endcomment %}
+    {% for recipeID in recipeIDArray %}
+
+        {% render 'recipe-single', recipeID: recipeID %}
+
+    {% endfor %}
+
+
+    <!-- Main script -->
+    <script>
+        const main = document.querySelector("body");
+        const tags = [];
+        main.innerHTML = main.innerHTML.replace(
+            /\[\[ recipeID=(recipe-\w+), \w+=(.*?)\]\]/g, 
+            (_, id) => {
+              	const tag = '.recipe-container[data-recipeid=' + id + ']';
+              	if (!tags.includes(tag)) {
+                	tags.unshift(tag);
+                  	return main.querySelector(tags[0]).outerHTML;
+              	}
+            }
+        );
+      try {
+        tags.forEach((tag) => main.querySelectorAll(tag)[1].remove());
+      } catch (err) {
+       	console.log("Recipes Error", err); 
+      }
+    </script>
+
+{% endif %}

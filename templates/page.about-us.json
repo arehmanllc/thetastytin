@@ -1,0 +1,71 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "1258f7b5-e54f-4ef9-90cd-be7acc7bf3d8": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--20634226557249__1258f7b5-e54f-4ef9-90cd-be7acc7bf3d8-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Us",
+            "heading_size": "h1"
+          }
+        },
+        "template--20634226557249__1258f7b5-e54f-4ef9-90cd-be7acc7bf3d8-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Feeding the world, one friend at a time. With handcrafted seasoning blends that turn simple meals into moan-worthy experiences. </strong></p><p><strong>Flavor-forward, joy-filled, and rooted in love 💖.</strong></p><p><br/></p><p>Tasty Tin® was built for the home cook who wants to impress without the stress. For the parent pulling dinner together after work, the foodie hosting friends, or the traveler who brought back spices in their suitcase but forgot how to use them—<strong>this is your home.</strong></p><p><br/></p><p>We believe in <em>delicious shortcuts.</em> In pantry staples that don’t need a supporting cast to make dinner pop.</p><p>Our seasonings are bold, balanced, and complete—meaning you don’t have to reach for salt, pepper, or garlic powder. <strong>It’s all in there.</strong> Just sprinkle and cook.</p><p><br/></p><p>Our blends are made to unlock flavor <em>and</em> confidence. Whether you’re layering flavors or just trying to get dinner on the table, every jar helps you cook like the best version of yourself.</p><p><br/></p><p>And speaking of jars—ours are designed to be reused, refilled, and admired. We package with intention:</p><p>♻️ recyclable pouches</p><p>🫙 glass jars with bamboo lids</p><p>✨ minimal labels that still feel luxe in your hands</p><p><br/></p><p>We like pretty things—but we also believe pretty should be practical.</p><p><br/></p><p>And we get it—you’re busy. Same.</p><p>Tasty Tin is run by a mom, a wife, a full-time worker, and a lifelong food-lover. <em>(Hey, I’m Thembi 👋🏾)</em>. I don’t have time for complicated meals every night, and I don’t think you should either. That’s why every blend we create is meant to help you <strong>unlock homemade meals with ease, confidence, and just a little sprinkle of magic.</strong></p><p><br/></p><p>We’re not just selling spices—we’re building a table.</p><p>Inspired by the Blue Zones and coastal living, we believe in slow meals, good company, and food that makes people feel seen. Whether you’re a carnivore, vegan, pescatarian, or somewhere in between—you’re welcome here.</p><p><br/></p><p>So come as you are. Season boldly.</p><p>And remember: <strong>even the “lazy” cook can still be the star of the kitchen.</strong></p><p></p><p></p>",
+            "text_style": "body"
+          }
+        },
+        "template--20634226557249__1258f7b5-e54f-4ef9-90cd-be7acc7bf3d8-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Collection",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "template--20634226557249__1258f7b5-e54f-4ef9-90cd-be7acc7bf3d8-heading-1",
+        "template--20634226557249__1258f7b5-e54f-4ef9-90cd-be7acc7bf3d8-text-1",
+        "template--20634226557249__1258f7b5-e54f-4ef9-90cd-be7acc7bf3d8-button-1"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/happy-customer-with-many-shopping-bags.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1258f7b5-e54f-4ef9-90cd-be7acc7bf3d8"
+  ]
+}

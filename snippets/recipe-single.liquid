@@ -1,0 +1,570 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+{% assign recipe = shop.metafields.recipes_bento[recipeID] %}
+
+{% comment %}--- Create recipe variables from JSON Data ---{% endcomment %}
+	{% assign title = recipe.title %}
+	{% assign summary = recipe.summary %}
+	{% assign mainImage = recipe.mainImage %}
+	{% assign pintImage = recipe.pintImage %}
+    {% assign pubDate = recipe.createDate | times: 0.001 | round |  date: "%Y-%m-%d" %}
+    {% if recipe.summary %}
+        {% assign summaryNoHTML = recipe.summary | strip_html %}
+    {% else %}
+        {% assign summaryNoHTML = "No summary description available." %}
+    {% endif %}
+
+    {% unless recipe.prepTime == 0 %}
+      {% assign prepHours = recipe.prepTime | divided_by: 60 | floor %}
+      {% assign prepMinutes = recipe.prepTime | modulo: 60 %}
+      {% if prepHours > 0 %}
+          {% assign prepTime = prepHours | append: " hours " | append: prepMinutes | append: " mins" %}
+          {% if prepHours < 10 %}{% assign prepHours = "0" | append: prepHours %}{% endif %}
+          {% if prepMinutes < 10 %}{% assign prepMinutes = "0" | append: prepMinutes %}{% endif %}
+          {% assign prepTimeSchema = "PT" | append: prepHours | append: "H" | append: prepMinutes | append: "M" %}
+      {% else %}
+          {% assign prepTime = prepMinutes | append: " mins" %}
+          {% if prepMinutes < 10 %}{% assign prepMinutes = "0" | append: prepMinutes %}{% endif %}
+          {% assign prepTimeSchema = "PT" | append: prepMinutes | append: "M" %}
+      {% endif %}
+    {% else %}
+      {% assign prepTime = false %}
+    {% endunless %}
+
+    {% unless recipe.cookTime == 0 %}
+      {% assign cookHours = recipe.cookTime | divided_by: 60 | floor %}
+      {% assign cookMinutes = recipe.cookTime | modulo: 60 %}
+      {% if cookHours > 0 %}
+          {% assign cookTime = cookHours | append: " hours " | append: cookMinutes | append: " mins" %}
+          {% if cookHours < 10 %}{% assign cookHours = "0" | append: cookHours %}{% endif %}
+          {% if cookMinutes < 10 %}{% assign cookMinutes = "0" | append: cookMinutes %}{% endif %}
+          {% assign cookTimeSchema = "PT" | append: cookHours | append: "H" | append: cookMinutes | append: "M" %}
+      {% else %}
+          {% assign cookTime = cookMinutes | append: " mins" %}
+          {% if cookMinutes < 10 %}{% assign cookMinutes = "0" | append: cookMinutes %}{% endif %}
+          {% assign cookTimeSchema = "PT" | append: cookMinutes | append: "M" %}
+      {% endif %}
+    {% else %}
+      {% assign cookTime = false %}
+    {% endunless %}
+
+    {% unless recipe.prepTime == 0 and recipe.cookTime == 0 %}
+      {% assign totalHours = recipe.prepTime | plus: recipe.cookTime | divided_by: 60 | floor %}
+      {% assign totalMinutes = recipe.prepTime | plus: recipe.cookTime | modulo: 60 %}
+      {% if totalHours > 0 %}
+          {% assign totalTime = totalHours | append: " hours " | append: totalMinutes | append: " mins" %}
+          {% if totalHours < 10 %}{% assign totalHours = "0" | append: totalHours %}{% endif %}
+          {% if totalMinutes < 10 %}{% assign totalMinutes = "0" | append: totalMinutes %}{% endif %}
+          {% assign totalTimeSchema = "PT" | append: totalHours | append: "H" | append: totalMinutes | append: "M" %}
+      {% else %}
+          {% assign totalTime = totalMinutes | append: " mins" %}
+          {% if totalMinutes < 10 %}{% assign totalMinutes = "0" | append: totalMinutes %}{% endif %}
+          {% assign totalTimeSchema = "PT" | append: totalMinutes | append: "M" %}
+      {% endif %}
+    {% else %}
+      {% assign totalTime = false %}
+    {% endunless %}
+
+        {% assign servings = recipe.servings | append: " " | append: recipe.servingType %}
+
+    {% assign keywords = "" %}
+        {% for keyword in recipe.keywords %}
+            {% assign keywords = keywords | append: keyword %}
+            {% unless forloop.last %}
+                {% assign keywords = keywords | append: ", " %}
+            {% endunless %}
+        {% endfor %}
+
+    {% assign cuisines = "" %}
+    {% for cuisine in recipe.cuisines %}
+            {% assign cuisines = cuisines | append: cuisine %}
+            {% unless forloop.last %}
+                {% assign cuisines = cuisines | append: ", " %}
+            {% endunless %}
+        {% endfor %}
+    
+    {% assign courses = "" %}
+    {% for course in recipe.courses %}
+            {% assign courses = courses | append: course %}
+            {% unless forloop.last %}
+                {% assign courses = courses | append: ", " %}
+            {% endunless %}
+        {% endfor %}
+
+    {% capture ingredientsSchema %}
+    {% assign ingredientItems = "" %}
+      {% for ingredient in recipe.ingredients %}
+        {% if ingredient.type == "ingredient" %}
+          {% assign ingredientItems = ingredientItems | append: '"' | append: ingredient.amount %}
+          {% if ingredient.unit %}
+            {% assign ingredientItems = ingredientItems | append: ' ' | append: ingredient.unit %}
+          {% endif %}
+          {% assign escapedName = ingredient.name | strip_html %}
+          {% assign ingredientItems = ingredientItems | append: ' ' | append: escapedName | append: '",' %}
+        {% endif %}
+      {% endfor %}
+    {% assign sliceVal = ingredientItems | size | minus: 1 %}
+    {% assign ingredientItems = ingredientItems | slice: 0, sliceVal %}
+    [
+        {{ingredientItems}}
+    ]
+    {% endcapture %}
+
+    {% capture instructionsSchema %}
+    {% assign instructionItems = "" %}
+      {% for instruction in recipe.instructions %}
+        {% if instruction.type == "step" %}
+          {% assign escapedStep = instruction.step | strip_html %}
+          {% assign instructionItems = instructionItems | append: '"' | append: escapedStep | append: '",' %}
+        {% endif %}
+      {% endfor %}
+    {% assign sliceVal = instructionItems | size | minus: 1 %}
+    {% assign instructionItems = instructionItems | slice: 0, sliceVal %}
+    [
+		{{ instructionItems}}
+    ]
+    {% endcapture %}
+
+    {% assign calories = recipe.nutrition.calories %}
+    {% assign carbs = recipe.nutrition.carbs %}
+    {% assign fat = recipe.nutrition.fat %}
+    {% assign fiber = recipe.nutrition.fiber %}
+    {% assign protein = recipe.nutrition.protein %}
+    {% assign satFat = recipe.nutrition.saturatedFat %}
+    {% assign servingsNutrition = recipe.nutrition.servings | append: " " | append: servingType %}
+    {% assign sodium = recipe.nutrition.sodium %}
+    {% assign sugar = recipe.nutrition.sugars %}
+    {% assign transFat = recipe.nutrition.transFat %}
+
+
+  <div class="recipe-container" id="{{ recipe.recipeID }}" data-recipeid="{{ recipe.recipeID }}" >
+    <div class="recipe-card" data-recipeid="{{ recipe.recipeID }}">
+      <div class="row header">
+          <div class="block content">
+            <h2>{{ title }}</h2>
+            {{ summary }}
+            <p class="servings"><span class="recipe-time-title">Servings:</span> {{ servings }}</p>
+        	  <p class="keywords"><span class="recipe-time-title">Keywords:</span> {{ keywords }}</p>
+            <ul class="recipe-timing">
+              {% unless prepTime == false %}
+              <li><span class="recipe-time-title">Prep Time:</span> {{ prepTime }}</li>	
+              {% endunless %}
+              {% unless cookTime == false %}
+              <li><span class="recipe-time-title">Cook Time:</span> {{ cookTime }}</li>	
+              {% endunless %}
+              {% if prepTime != false and cookTime != false %}
+              <li><span class="recipe-time-title">Total Time:</span> {{ totalTime }}</li>	
+              {% endif %}
+            </ul>
+          </div>
+          <div class="block image">
+            <img {% unless pintImage == null %}nopin = "nopin"{% endunless %} class="recipe-image {% if shop.metafields.recipes_bento.recipe_settings.settings.printing.show_main_img == false %} hide-print{% endif %}" src="{{ mainImage }}"/>
+          </div>
+      </div>
+      
+      
+      {% assign permalinkURL = shop.url %}
+      
+      <div class="share-buttons top">
+        {% if shop.metafields.recipes_bento.recipe_settings.settings.printing.enabled == true %}
+        <a href="javascript:void(0);" class="share-button print" onclick="printPageArea('{{ recipe.recipeID }}')">
+          <i class="fas fa-print"></i>
+          <span class="share-title">Print Recipe</span>
+        </a>
+        {% endif %}
+        {% if shop.metafields.recipes_bento.recipe_settings.settings.social.show_pinterest == true %}
+        <a class="share-button pinterest" target="_blank" href="//pinterest.com/pin/create/button/?media={% if pintImage == null %}{{ mainImage | escape }}{% else %}{{ pintImage | escape }}{% endif %}" data-pin-custom="true" data-pin-do="buttonPin" >
+          <i class="fab fa-pinterest-p"></i>
+          <span class="share-title">Pin it</span>
+        </a>
+        {% endif %}
+        {% if shop.metafields.recipes_bento.recipe_settings.settings.social.show_facebook == true %}
+        {% assign fb_share_url = shop.domain | append: request.path | url_encode %}
+        <a class="share-button facebook fb-share-button" target="_blank" href="//www.facebook.com/sharer.php?u={{fb_share_url}}" >
+          <i class="fab fa-facebook-f"></i>
+          <span class="share-title">Share on Facebook</span>
+        </a>
+        {% endif %}
+        {% if shop.metafields.recipes_bento.recipe_settings.settings.social.show_twitter == true %}
+        {% assign twitter_share_url = shop.domain | append: request.path | url_encode %}
+        <a class="share-button twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Check%20out%20this%20great%20recipe%20on%20{{ shop.name }}%20-%20{{ twitter_share_url }}">
+          <i class="fab fa-twitter"></i>
+          <span class="share-title">Share on Twitter</span>
+        </a>
+        {% endif %}
+      </div>
+
+      <div class="ingred-instruction-tabs">
+        <div class="block">
+            <div onclick="javascript:recipeTabSwitch('{{ recipe.recipeID }}-ingred-tab', '{{ recipe.recipeID }}-ingred', '{{ recipe.recipeID }}');" id="{{ recipe.recipeID }}-ingred-tab" class="tabmenu-{{ recipe.recipeID }} active">
+                <h3 class="title tab-button"  >Ingredients</h3>
+            </div>
+        </div>
+        <div class="block">
+            <div onclick="javascript:recipeTabSwitch('{{ recipe.recipeID }}-instruc-tab', '{{ recipe.recipeID }}-instruc', '{{ recipe.recipeID }}');" id="{{ recipe.recipeID }}-instruc-tab" class="tabmenu-{{ recipe.recipeID }}">
+                <h3 class="title tab-button" >Instructions</h3>
+            </div>
+        </div>
+      </div>
+
+      <div class="ingred-instruction-row avoid-page-break" >
+        <div id="{{ recipe.recipeID }}-ingred" class="block tabcontent-{{ recipe.recipeID }} ingredients">
+          <h3 class="title">Ingredients</h3>
+          <ul>
+          {% for ingredient in recipe.ingredients %}
+              {% if ingredient.type == "header" %}
+                  {% if prevIngredient != "header" %}</ul>{% endif %}
+                  <h4>{{ ingredient.text }}</h4>
+                  {% assign prevIngredient = ingredient.type %}
+              {% endif %}
+
+              {% if ingredient.type == "ingredient" %}
+
+                  {% assign amount_whole = 0 %}
+                  {% assign amount_fraction = ingredient.amount | modulo: 1 %}
+
+                  {% if ingredient.amount >= 1 %}
+                      {% assign amount_whole = ingredient.amount | floor %}
+                  {% endif %}
+
+                  {% case amount_fraction %}
+                      {% when 0.5 %}
+                          {% assign amount_fraction_text = "½" %}
+                      {% when 0.333 %}
+                          {% assign amount_fraction_text = "⅓" %}
+                      {% when 0.667 %}
+                          {% assign amount_fraction_text = "⅔" %}
+                      {% when 0.25 %}
+                          {% assign amount_fraction_text = "¼" %}
+                      {% when 0.75 %}
+                          {% assign amount_fraction_text = "¾" %}
+                      {% when 0.2 %}
+                          {% assign amount_fraction_text = "⅕" %}
+                      {% when 0.4 %}
+                          {% assign amount_fraction_text = "⅖" %}
+                      {% when 0.6 %}
+                          {% assign amount_fraction_text = "⅗" %}
+                      {% when 0.8 %}
+                          {% assign amount_fraction_text = "⅘" %}
+                      {% when 0.167 %}
+                          {% assign amount_fraction_text = "⅙" %}
+                      {% when 0.833 %}
+                          {% assign amount_fraction_text = "⅚" %}
+                      {% when 0.125 %}
+                          {% assign amount_fraction_text = "⅛" %}
+                      {% when 0.375 %}
+                          {% assign amount_fraction_text = "⅜" %}
+                      {% when 0.625 %}
+                          {% assign amount_fraction_text = "⅝" %}
+                      {% when 0.875 %}
+                          {% assign amount_fraction_text = "⅞" %}
+                      {% else %}
+                          {% assign amount_fraction_text = amount_fraction %}
+                  {% endcase %}
+
+
+                  {% if amount_whole != 0 and amount_fraction != 0 %}
+                      {% assign amount = amount_whole | append: " " | append: amount_fraction_text %}
+                  {% elsif amount_whole == 0 %}
+                      {% assign amount = amount_fraction_text %}
+                  {% elsif amount_fraction == 0 %}
+                      {% assign amount = amount_whole %}
+                  {% endif %}
+
+                  {% if prevIngredient == "header" %}<ul>{% endif %}
+                  <li class="ingredient">{% if ingredient.link %}<a href="{{ ingredient.link }}" target="_blank">{% endif %}{% unless amount == 0 %}{{amount}}{% endunless %} {{ingredient.unit}} {{ ingredient.name }}{% if ingredient.link %}</a>{% endif %}</li>
+                  {% assign prevIngredient = ingredient.type %}
+              {% endif %}
+
+          {% endfor %}
+          </ul>
+        </div>
+
+        <div id="{{ recipe.recipeID }}-instruc"class="block tabcontent-{{ recipe.recipeID }} instructions">
+
+          <h3 class="title">Instructions</h3>
+          {% assign counter = 1 %}
+          {% for instruction in recipe.instructions %}
+              {% if instruction.type == "header" %}
+                  {% if prevInstruction == "step" %}</ol>{% endif %}
+                  <h4>{{ instruction.text }}</h4>
+                  {% assign prevInstruction = instruction.type %}
+              {% endif %}
+
+              {% if instruction.type == "step" %}
+                  {% if prevInstruction != "step" %}<ol start="{{ counter }}">{% endif %}
+                  <li class="step">{{instruction.step }}</li>
+                  {% assign prevInstruction = instruction.type %}
+                  {% assign counter = counter | plus: 1 %}
+              {% endif %}
+
+              {% if instruction.type == "image" %}
+                  {% if prevInstruction == "step" %}</ol>{% endif %}
+                  <img nopin = "nopin" class="step-image{% if shop.metafields.recipes_bento.recipe_settings.settings.printing.show_instruction_media == false %} hide-print{% endif %}" src="{{instruction.url}}"/>
+                  {% assign prevInstruction = instruction.type %}
+              {% endif %}
+
+          {% endfor %}
+
+        </div>
+      </div>
+
+      {% if recipe.nutrition.servings != "" or recipe.notes != null %}
+      <div class="nutrition-notes-row avoid-page-break">
+
+        {% if recipe.nutrition.servings != "" %}
+        <div class="block nutrition">
+          <section class="performance-facts">
+            <header class="performance-facts__header">
+              <h3 class="performance-facts__title">Nutrition Facts</h1>
+              <p>Serving Size: {{servingsNutrition}}</p>
+              <p>Serving Per Recipe: {{servings}}</p>
+            </header>
+            <table class="performance-facts__table">
+              <thead>
+                <tr>
+                  <th colspan="3" class="small-info">
+                    Amount Per Serving
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th colspan="2">
+                    <b>Calories</b>
+                    {{calories}}
+                  </th>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr class="thick-row">
+                  <td colspan="3" class="small-info">
+                    <b>% Daily Value*</b>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                    <b>Total Fat</b>
+                    {{fat}}g
+                  </th>
+                  <td>
+                    <b>{{ fat | times: 100 | divided_by: 65 | floor }}%</b>
+                  </td>
+                </tr>
+                <tr class="secondary">
+                  <th>
+                    Saturated Fat
+                    {{satFat}}g
+                  </th>
+                  <td>
+                  </td>
+                  <td>
+                    <b>{{ satFat | times: 100 | divided_by: 20 | floor }}%</b>
+                  </td>
+                </tr>
+                <tr class="secondary">
+                  <th>
+                    Trans Fat
+                    {{transFat}}g
+                  </th>
+                  <td >
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                    <b>Sodium</b>
+                    {{sodium}}mg
+                  </th>
+                  <td>
+                    <b>{{ sodium | times: 100 | divided_by: 2400 | floor }}%</b>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                    <b>Total Carbohydrate</b>
+                    {{carbs}}g
+                  </th>
+                  <td>
+                    <b>{{ carbs | times: 100 | divided_by: 300 | floor }}%</b>
+                  </td>
+                </tr>
+                <tr class="secondary">
+                  <th>
+                    Dietary Fiber
+                    {{fiber}}g
+                  </th>
+                  <td>
+                  </td>
+                  <td>
+                    <b>{{ fiber | times: 100 | divided_by: 25 | floor }}%</b>
+                  </td>
+                </tr>
+                <tr class="secondary">
+                  <th>
+                    Sugars
+                    {{sugar}}g
+                  </th>
+                  <td >
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr class="thick-end">
+                  <th colspan="2">
+                    <b>Protein</b>
+                    {{protein}}g
+                  </th>
+                  <td>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p class="small-info">* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs:</p>
+
+          </section>
+        </div>
+        {% endif %}
+
+
+        {% if recipe.notes != null %}
+        <div class="block notes">
+          <h3>Notes</h3>
+          {{ recipe.notes }}
+        </div>
+        {% endif %}
+
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+       {
+        "@context": "http://schema.org/",
+        "@type": "Recipe",
+        "name": "{{title}}",
+        "image": [
+          "{{ mainImage }}"
+          ],
+        "author": {
+          "@type": "Person",
+          "name": "{{recipe.author}}"
+        },
+        "datePublished": "{{ pubDate }}",
+        "description": "{{ summaryNoHTML }}",
+        "prepTime": "{{ prepTimeSchema }}",
+        "cookTime": "{{ cookTimeSchema }}",
+        "totalTime": "{{ totalTimeSchema }}",
+        "keywords": "{{ keywords }}",
+        "recipeYield": "{{ servings }}",
+        "recipeCategory": "{{ courses }}",
+        "recipeCuisine": "{{ cuisines }}",
+        {% if recipe.nutrition.calories %}
+        "nutrition": {
+          "@type": "NutritionInformation",
+          "calories": "{{calories}}"
+          {% if carbs != blank %}, "carbohydrateContent": "{{carbs}}"{% endif %}
+          {% if carbs != blank %}, "fatContent": "{{fat}}"{% endif %}
+          {% if carbs != blank %}, "fiberContent": "{{fiber}}"{% endif %}
+          {% if carbs != blank %}, "proteinContent": "{{protein}}"{% endif %}
+          {% if carbs != blank %}, "saturatedFatContent": "{{satFat}}"{% endif %}
+          {% if carbs != blank %}, "servingSize": "{{servingsNutrition}}"{% endif %}
+          {% if carbs != blank %}, "sodiumContent": "{{sodium}}"{% endif %}
+          {% if carbs != blank %}, "sugarContent": "{{sugar}}"{% endif %}
+          {% if carbs != blank %}, "transFatContent": "{{transFat}}"{% endif %}
+          },
+        {% endif %}
+        "recipeIngredient": {{ingredientsSchema}},
+        "recipeInstructions": {{instructionsSchema}}
+  }
+  </script>
+
+  <script>
+    function recipeTabSwitch(tab_id, tab_content, this_recipe ) {
+        // first of all we get all tab content blocks (I think the best way to get them by class names)
+        var x = document.getElementsByClassName("tabcontent-" + this_recipe );
+        var i;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = 'none'; // hide all tab content
+        }
+        document.getElementById(tab_content).style.display = 'block'; // display the content of the tab we need
+    
+        // now we get all tab menu items by class names (use the next code only if you need to highlight current tab)
+        var x = document.getElementsByClassName("tabmenu-" + this_recipe );
+        var i;
+        for (i = 0; i < x.length; i++) {
+            x[i].className = 'tabmenu-' + this_recipe; 
+        }
+        document.getElementById(tab_id).className = 'tabmenu-' + this_recipe + ' active';
+    }
+    
+    function printPageArea(areaID){
+     	const content = document.getElementById(areaID);
+      	const name = content.querySelector('h2').innerHTML;
+      
+      	const print = () => w.print();
+      	content.onclick = () => print();
+      
+      
+      	const w = window.open('', '', 'width=900,height=650');
+      	w.document.write(`
+			<html>
+				<head>
+					<title>Print Preview - ${name}</title>
+					<style>
+            body { overflow-x: hidden; }
+            img { width: 300px; }
+            a { display: none; }
+            @media print {
+              #controls { display: none; }
+            }
+            .row.header { display: flex; justify-content: space-between; height: 125px; border-bottom: 1px solid #000; padding-bottom: 10px; }
+            .block.content { display: grid; grid-auto-flow: column; grid-template-columns: 1fr max-content; grid-template-rows: repeat(4, min-content); column-gap: 20px; }
+            .block.content>ul { grid-row: 3/-1; padding: 0; list-style: none; }
+            .block.content>h2 { grid-column: 1/-1; }
+            .block.content>h2, .block.content>p, .block.content>ul { margin: 0; }
+            .block.content>p:first-of-type { grid-row: span 2; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+            .block.content>p:nth-of-type(2) { grid-row: 2; grid-column: 2; margin-bottom: 5px; }
+            .block.content>p:last-of-type { font-size: 10px; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+            .block.image { overflow: hidden; width: 125px; height: 100%; margin-left: 20px; }
+            .block.image>img { object-fit: cover; width: 100%; height: 100%; }
+            .ingred-instruction-row, .nutrition-notes-row { display: flex; }
+            .ingred-instruction-row>div:first-of-type, .block.nutrition { width: 220px; padding-right: 20px; }
+            .ingred-instruction-row ul, .ingred-instruction-row ol { padding: 0; padding-left: 20px; }
+            li { padding-bottom: 5px; }
+            .block.instructions { display: flex; flex-direction: column; }
+            .block.instructions img { margin: auto; }
+            .performance-facts { border: 1px solid #000; margin: 0; padding: 10px; }
+            .performance-facts__header { border-bottom: 10px solid #000; padding-bottom: 10px; margin-bottom: 10px; }
+            .performance-facts__header>p { margin: 0; }
+            .performance-facts__title { margin: 0; font-weight: bold; font-size: 18px; margin-bottom: 10px; }
+            th { font-size: 12px; font-weight: 300; text-align: left; }\
+            b { text-align: left; }
+            .recipe-container .recipe-image { object-fit: contain; }
+            .recipe-container .block.image { width: 600px; }
+            .ingred-instruction-tabs { display: none; }
+					</style>
+    			</head>
+				<body>
+					${content.outerHTML}
+    			</body>
+			</html>
+		`);
+      	w.document.close();
+      w.onafterprint = () => {
+		w.close();
+      }
+  	}
+  </script>
+
+{% if shop.metafields.recipes_bento.recipe_settings.settings.social.show_pinterest == true %}  		
+    <script
+         type="text/javascript"
+         async defer
+         src="//assets.pinterest.com/js/pinit.js"
+         ></script>
+{% endif %}

@@ -1,0 +1,114 @@
+{% comment %}
+  Renders cart notification
+
+  Accepts:
+  - color_scheme: {String} sets the color scheme of the notification (optional)
+  - desktop_menu_type: {String} passes the desktop menu type which allows us to use the right css class (optional)
+
+  Usage:
+  {% render 'cart-notification' %}
+{% endcomment %}
+
+<cart-notification>
+  <div class="cart-notification-wrapper{% if desktop_menu_type != 'drawer' %} page-width{% endif %}">
+    <div
+      id="cart-notification"
+      class="cart-notification focus-inset{% if color_scheme %} color-{{ color_scheme }} gradient{% endif %}"
+      aria-modal="true"
+      aria-label="{{ 'general.cart.item_added' | t }}"
+      role="dialog"
+      tabindex="-1"
+    >
+      <div class="cart-notification__header">
+        <h2 class="cart-notification__heading caption-large text-body">
+          {%- render 'icon-checkmark' -%}
+          {{ 'general.cart.item_added' | t }}
+        </h2>
+        <button
+          type="button"
+          class="cart-notification__close modal__close-button link link--text focus-inset"
+          aria-label="{{ 'accessibility.close' | t }}"
+        >
+          <svg class="icon icon-close" aria-hidden="true" focusable="false">
+            <use href="#icon-close">
+          </svg>
+        </button>
+      </div>
+      <div id="cart-notification-product" class="cart-notification-product"></div>
+
+    <div class="ProgressBarLoadingWrapper">
+  <div class="loadingDiv" style="background: #eee;min-height: 100px;border-radius: 12px;"></div>
+  <div class="ProgressBarMainWrapperFirst ProgressBarMainWrapper">
+    <div style="">
+      <div class="ProgressBarTimmerBody"></div>
+      <div class="ProgressBarBody">
+        <div class="ProgressBarBarsWrapper">
+          <div class="blockProgressWrapper">
+            <div class="blockProgressWrapper-1"></div>
+            <div class="blockProgressWrapper-2"></div>
+            <div class="blockProgressWrapper-3"></div>
+          </div>
+          <div class="FlexProgressBlock">
+            <div class="FlexProgressBlockHeaddding"></div>
+            <div class="FlexProgressBlockHeaddding-1"></div>
+            <div class="FlexProgressBlockHeaddding-2"></div>
+            <div class="flexProgressBarWrapper">
+              <div class="inlinePrgressBar"></div>
+
+              <div class="inlinePrgressBar-1"></div>
+
+              <div class="inlinePrgressBar-2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="GoalAchievedMessage">
+          <h5 class="GoalAchievedMessageText"></h5>
+        </div>
+        <div class="mianSuccessWrapper">
+          <div>
+            <div class="SuccessWrapper-0"></div>
+            <div class="SuccessWrapper-1"></div>
+            <div class="SuccessWrapper-2"></div>
+          </div>
+        </div>
+        <div class="upselStackWrapper" ></div>
+        <div id="ProgressBarCarousel" class="upselCarouselWrapper" style="margin-top: 20px;">
+          <div id="pbCarousel" class="carousel slide" data-ride="carousel" data-bs-touch="true">
+            <!-- Indicators -->
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner"></div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#pbCarousel" data-slide="prev">
+              <i class="carouselIconPBar fa-solid fa-chevron-left"></i> <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#pbCarousel" data-slide="next">
+              <i class="carouselIconPBar fa-solid fa-chevron-right"></i> <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+      <div class="cart-notification__links">
+        <a
+          href="{{ routes.cart_url }}"
+          id="cart-notification-button"
+          class="button button--secondary button--full-width"
+        >{{ 'general.cart.view_empty_cart' | t }}</a>
+        <form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
+          <button class="button button--primary button--full-width" name="checkout">
+            {{ 'sections.cart.checkout' | t }}
+          </button>
+        </form>
+        <button type="button" class="link button-label">{{ 'general.continue_shopping' | t }}</button>
+      </div>
+    </div>
+  </div>
+</cart-notification>
+{% style %}
+  .cart-notification {
+    display: none;
+  }
+{% endstyle %}

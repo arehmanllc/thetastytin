@@ -1,0 +1,98 @@
+{%- liquid
+  assign s = section.settings
+-%}
+
+<div
+  class="utility-bar color-{{ s.color_scheme }} gradient{% if s.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% endif %}"
+  {{ block.shopify_attributes }}
+>
+    <div class="page-width TEN12-bar">
+        <marquee>
+            <a href="{{ s.collection.url }}">
+                <div class="marquee-wrapper">
+                    {%- for block in section.blocks -%}
+                        <p class="marquee-item">{{ block.settings.text }}</p>
+                    {%- endfor -%}
+                </div>
+            </a>
+        </marquee>
+    </div>
+</div>
+
+<style>
+    .TEN12-bar p {
+        margin: 0;
+    }
+    .TEN12-bar {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+    .TEN12-bar a {
+        color: inherit;
+        text-decoration: unset;
+    }
+    .TEN12-bar a:hover {
+        text-decoration: underline;
+    }
+    .TEN12-bar marquee {
+        display: block;
+    }
+    .TEN12-bar .marquee-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .TEN12-bar .marquee-item {
+        margin-right: 5px;
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Announcement Bar",
+  "max_blocks": 12,
+  "class": "announcement-bar-section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "accent-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_line_separator",
+      "default": true,
+      "label": "t:sections.header.settings.show_line_separator.label"
+    },
+    {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection Select"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "t:sections.announcement-bar.blocks.announcement.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "✹ Free Shipping on over $200",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Announcement Bar",
+      "blocks": [
+        {
+          "type": "announcement"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

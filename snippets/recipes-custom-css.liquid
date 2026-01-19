@@ -1,0 +1,116 @@
+{% comment %}
+
+This file is controlled by the Recipes app by BentoSMB. If this file is edited, it will automatically be updated during the next save of your theme. 
+
+-----------------------------------------------------------------------------
+-------- DO NOT UPDATE THIS FILE DIRECTLY - ALL CHANGES WILL BE LOST --------
+-----------------------------------------------------------------------------
+
+{% endcomment %}
+
+{% assign recipeSettings = shop.metafields.recipes_bento.recipe_settings.settings %}
+<style>
+  {% assign fontImportList = "" %}
+  {% assign addedFonts = 0 %}
+  {% if recipeSettings.recipe_format.recipe_titles.font != "inherit" %}
+    {% assign fontImportList = fontImportList | append: "family=" | append: recipeSettings.recipe_format.recipe_titles.font %}
+  	{% if recipeSettings.recipe_format.recipe_titles.weight != "no-weight"%}
+      {% assign fontImportList = fontImportList | append: ":" | append: recipeSettings.recipe_format.recipe_titles.weight | replace: " ", "+" %}
+    {% endif %}
+    {% assign addedFonts = addedFonts | plus: 1 %}
+  {% endif %}
+  {% if recipeSettings.recipe_format.secondary_headers.font != "inherit" %}
+    {% if addedFonts != 0 %}{% assign fontImportList = fontImportList | append: "&" %}{% endif %}
+    {% assign fontImportList = fontImportList | append: "family=" | append: recipeSettings.recipe_format.secondary_headers.font %}
+  	{% if recipeSettings.recipe_format.secondary_headers.weight != "no-weight"%}
+      {% assign fontImportList = fontImportList | append: ":" | append: recipeSettings.recipe_format.secondary_headers.weight | replace: " ", "+" %}
+    {% endif %}
+    {% assign addedFonts = addedFonts | plus: 1 %}
+  {% endif %}
+  {% if recipeSettings.recipe_format.text.font != "inherit" %}
+    {% if addedFonts != 0 %}{% assign fontImportList = fontImportList | append: "&" %}{% endif %}
+    {% assign fontImportList = fontImportList | append: "family=" | append: recipeSettings.recipe_format.text.font %}
+  	{% if recipeSettings.recipe_format.text.weight != "no-weight"%}
+      {% assign fontImportList = fontImportList | append: ":" | append: recipeSettings.recipe_format.text.weight | replace: " ", "+" %}
+    {% endif %}
+    {% assign addedFonts = addedFonts | plus: 1 %}
+  {% endif %}
+  {% if recipeSettings.recipe_format.links.font != "inherit" %}
+    {% if addedFonts != 0 %}{% assign fontImportList = fontImportList | append: "&" %}{% endif %}
+    {% assign fontImportList = fontImportList | append: "family=" | append: recipeSettings.recipe_format.links.font %}
+  	{% if recipeSettings.recipe_format.links.weight != "no-weight" %}
+      {% assign fontImportList = fontImportList | append: ":" | append: recipeSettings.recipe_format.links.weight | replace: " ", "+" %}
+    {% endif %}
+    {% assign addedFonts = addedFonts | plus: 1 %}
+  {% endif %}
+  
+  {% if fontImportList != "" %}
+  @import url('https://fonts.googleapis.com/css2?{{fontImportList}}&display=swap');
+  {% endif %}
+    
+
+  {% if recipeSettings.recipe_format.recipe_titles.font != "inherit" or recipeSettings.recipe_format.recipe_titles.size != "inherit" or recipeSettings.recipe_format.recipe_titles.color != "inherit" %}
+  .recipe-block .recipe-card h2 {
+    {%- if recipeSettings.recipe_format.recipe_titles.font != "inherit" -%}
+    font-family: '{{recipeSettings.recipe_format.recipe_titles.font | replace: "+", " " }}';
+    font-weight: {{recipeSettings.recipe_format.recipe_titles.weight | split: "@" | last | split: "," | last }} ;
+    {%- endif -%}
+    {%- if recipeSettings.recipe_format.recipe_titles.size != "inherit" -%}
+    font-size: {{recipeSettings.recipe_format.recipe_titles.size}}px ;
+    {%- endif -%}
+    {%- if recipeSettings.recipe_format.recipe_titles.color != "inherit" -%}
+    color: {{recipeSettings.recipe_format.recipe_titles.color}} ;
+    {%- endif -%}
+  }
+  {% endif %}
+  {% if recipeSettings.recipe_format.secondary_headers.font != "inherit" or recipeSettings.recipe_format.secondary_headers.size != "inherit" or recipeSettings.recipe_format.secondary_headers.color != "inherit" %}
+  .recipe-block .recipe-card h3 {
+    {%- if recipeSettings.recipe_format.secondary_headers.font != "inherit" -%}
+    font-family: '{{recipeSettings.recipe_format.secondary_headers.font | replace: "+", " " }}' ;
+    font-weight: {{recipeSettings.recipe_format.secondary_headers.weight | split: "@" | last | split: "," | last }} ;
+    {%- endif -%}
+    {%- if recipeSettings.recipe_format.secondary_headers.size != "inherit" -%}
+    font-size: {{recipeSettings.recipe_format.secondary_headers.size}}px ;
+    {%- endif -%}
+    {%- if recipeSettings.recipe_format.secondary_headers.color != "inherit" -%}
+    color: {{recipeSettings.recipe_format.secondary_headers.color}} ;
+    {%- endif -%}
+  }
+  {% endif %}
+  {% if recipeSettings.recipe_format.text.font != "inherit" or recipeSettings.recipe_format.text.size != "inherit" or recipeSettings.recipe_format.text.color != "inherit" %}
+  .recipe-block .recipe-card p, .recipe-block .recipe-card li  {
+    {%- if recipeSettings.recipe_format.text.font != "inherit" -%}
+    font-family: '{{recipeSettings.recipe_format.text.font | replace: "+", " " }}';
+    font-weight: {{recipeSettings.recipe_format.text.weight | split: "@" | last | split: "," | last }} ;
+    {%- endif -%}
+    {%- if recipeSettings.recipe_format.text.size != "inherit" -%}
+    font-size: {{recipeSettings.recipe_format.text.size}}px ;
+    {%- endif -%}
+    {%- if recipeSettings.recipe_format.text.color != "inherit" -%}
+    color: {{recipeSettings.recipe_format.text.color}} ;
+    {%- endif -%}
+  }
+  {% endif %}
+  {% if recipeSettings.recipe_format.links.font != "inherit" or recipeSettings.recipe_format.links.size != "inherit" or recipeSettings.recipe_format.links.color != "inherit" %}
+  .recipe-block .recipe-card a  {
+    {%- if recipeSettings.recipe_format.links.font != "inherit" -%}
+    font-family: '{{recipeSettings.recipe_format.links.font | replace: "+", " " }}';
+    font-weight: {{recipeSettings.recipe_format.links.weight | split: "@" | last | split: "," | last }};
+    {%- endif -%}
+    {%- if recipeSettings.recipe_format.links.size != "inherit" -%}
+    font-size: {{recipeSettings.recipe_format.links.size}}px;
+    {%- endif -%}
+    {%- if recipeSettings.recipe_format.links.color != "inherit" -%}
+    color: {{recipeSettings.recipe_format.links.color}};
+    {%- endif -%}
+  }
+  {% endif %}
+  {% if recipeSettings.recipe_format.links.hover_color != "inherit" %}
+  .recipe-block .recipe-card a:hover {
+    color: {{recipeSettings.recipe_format.links.hover_color}};
+  }
+  {% endif %}
+  
+  {{ recipeSettings.recipe_format.custom_css }}
+  
+</style>

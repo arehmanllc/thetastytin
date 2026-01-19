@@ -1,0 +1,89 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "3d8e9712-68a0-4021-a7d5-730d010a2ddf": {
+      "type": "TEN12-image-banner",
+      "blocks": {
+        "template--20686828470572__3d8e9712-68a0-4021-a7d5-730d010a2ddf-heading-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--20686828470572__3d8e9712-68a0-4021-a7d5-730d010a2ddf-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--20686828470572__3d8e9712-68a0-4021-a7d5-730d010a2ddf-buttons-1": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20686828470572__3d8e9712-68a0-4021-a7d5-730d010a2ddf-heading-1",
+        "template--20686828470572__3d8e9712-68a0-4021-a7d5-730d010a2ddf-text-1",
+        "template--20686828470572__3d8e9712-68a0-4021-a7d5-730d010a2ddf-buttons-1"
+      ],
+      "settings": {
+        "design-deeva-link": "",
+        "image": "shopify://shop_images/4_d5d551c1-0dcb-4809-b59f-8353b0b1965c.png",
+        "image_2": "shopify://shop_images/10.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "scheme-2835f882-0aee-472d-9c2f-c3dda7643a8a",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "3d8e9712-68a0-4021-a7d5-730d010a2ddf",
+    "main",
+    "form"
+  ]
+}

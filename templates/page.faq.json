@@ -1,0 +1,212 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "8ba5b3e1-e716-4a2f-b688-4237869916f2": {
+      "type": "image-banner",
+      "blocks": {
+        "template--17731419210043__8ba5b3e1-e716-4a2f-b688-4237869916f2-16746151890abeb960-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--17731419210043__8ba5b3e1-e716-4a2f-b688-4237869916f2-16746151890abeb960-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--17731419210043__8ba5b3e1-e716-4a2f-b688-4237869916f2-16746151890abeb960-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--17731419210043__8ba5b3e1-e716-4a2f-b688-4237869916f2-16746151890abeb960-0",
+        "template--17731419210043__8ba5b3e1-e716-4a2f-b688-4237869916f2-16746151890abeb960-1",
+        "template--17731419210043__8ba5b3e1-e716-4a2f-b688-4237869916f2-16746151890abeb960-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "338a3e4b-5472-41c5-a459-460790c73936": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--17731419210043__338a3e4b-5472-41c5-a459-460790c73936-1674594155f10e1b12-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Shipping Question",
+            "icon": "plane",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "template--17731419210043__338a3e4b-5472-41c5-a459-460790c73936-1674594155f10e1b12-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Shipping Question",
+            "icon": "plane",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17731419210043__338a3e4b-5472-41c5-a459-460790c73936-1674594155f10e1b12-0",
+        "template--17731419210043__338a3e4b-5472-41c5-a459-460790c73936-1674594155f10e1b12-1"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Shipping",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-1",
+        "container_color_scheme": "accent-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "6cb3ca12-7f17-468a-ba76-025c7130ee64": {
+      "type": "collapsible-content",
+      "blocks": {
+        "d895483c-d452-431f-9264-7d868336e437": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I return an item?",
+            "icon": "return",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "df922b1a-c469-4e1d-9997-f3579a0bd68c": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to process my return?",
+            "icon": "return",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "d895483c-d452-431f-9264-7d868336e437",
+        "df922b1a-c469-4e1d-9997-f3579a0bd68c"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Returns",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-1",
+        "container_color_scheme": "accent-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "63afbde9-e8d0-494f-9a64-c6687d36fad5": {
+      "type": "collapsible-content",
+      "blocks": {
+        "2103e947-4f71-49cb-888f-70b7f942d727": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question",
+            "icon": "return",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "bcccb89d-4878-4eed-bfb0-20284fb6579a": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question",
+            "icon": "return",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "ef36641f-f76d-4c53-8009-8f44f025605b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Question",
+            "icon": "return",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "2103e947-4f71-49cb-888f-70b7f942d727",
+        "bcccb89d-4878-4eed-bfb0-20284fb6579a",
+        "ef36641f-f76d-4c53-8009-8f44f025605b"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "General",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "background-1",
+        "container_color_scheme": "accent-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "8ba5b3e1-e716-4a2f-b688-4237869916f2",
+    "338a3e4b-5472-41c5-a459-460790c73936",
+    "6cb3ca12-7f17-468a-ba76-025c7130ee64",
+    "63afbde9-e8d0-494f-9a64-c6687d36fad5"
+  ]
+}

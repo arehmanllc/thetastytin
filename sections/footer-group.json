@@ -1,0 +1,72 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "b39fce57-3dfe-4e6e-9dc2-db1426901918": {
+          "type": "brand_information",
+          "disabled": true,
+          "settings": {
+            "show_social": true
+          }
+        },
+        "a49fef5f-74e0-4907-a352-481e6d71172e": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Information",
+            "menu": "footer"
+          }
+        },
+        "9ab3d3aa-c3ce-47e0-90a0-3b03f2a9ee57": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Shop",
+            "menu": "main-menu"
+          }
+        },
+        "a1f45101-2144-4552-8dcb-42fdf0af24dd": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "heading": "Customer Support 24/7",
+            "subtext": "<p>Message me on Etsy if you have any questions! All text and images on the demo site are customizable</p>"
+          }
+        }
+      },
+      "block_order": [
+        "b39fce57-3dfe-4e6e-9dc2-db1426901918",
+        "a49fef5f-74e0-4907-a352-481e6d71172e",
+        "9ab3d3aa-c3ce-47e0-90a0-3b03f2a9ee57",
+        "a1f45101-2144-4552-8dcb-42fdf0af24dd"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
