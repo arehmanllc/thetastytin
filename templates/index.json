@@ -15,71 +15,46 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<em>Seasonings</em>For Everyday Cooking",
+            "heading": "<em><strong>Seasonings</strong></em>",
             "heading_size": "h0"
+          }
+        },
+        "text_P8NW6C": {
+          "type": "text",
+          "settings": {
+            "text": "For Everyday Cooking",
+            "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "Shop All",
             "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_1": false,
+            "button_label_2": "Explore Recipes",
+            "button_link_2": "#",
+            "button_style_secondary_2": true
           }
         }
       },
       "block_order": [
         "heading",
+        "text_P8NW6C",
         "button"
       ],
       "settings": {
-        "design-deeva-link": "shopify://collections",
+        "design-deeva-link": "",
         "image": "shopify://shop_images/banner_3_1.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "middle-left",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "background-1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "9ba837bf-4b3f-4755-860c-56f667bd0e7f": {
-      "type": "TEN12-image-banner",
-      "blocks": {
-        "text_pQatXC": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<em>Feeding the world one friend at a time—handcrafted blends for soulful meals.</em>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "text_pQatXC"
-      ],
-      "disabled": true,
-      "settings": {
-        "design-deeva-link": "shopify://products/garlic-dust-seasoning-shaker",
-        "image": "shopify://shop_images/Banner-1.jpg",
-        "image_2": "shopify://shop_images/Post-1.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
         "show_text_below": false
       }
     },
@@ -655,7 +630,6 @@
   },
   "order": [
     "image_banner",
-    "9ba837bf-4b3f-4755-860c-56f667bd0e7f",
     "e480a12a-dc5b-4bf0-ad15-e9548489cd2e",
     "5a9d24c0-4891-45dc-a123-13385d3ec484",
     "featured_collection",

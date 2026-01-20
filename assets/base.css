@@ -123,8 +123,8 @@ url("SuisseIntlMonoTrial-Regular.woff") format("woff");
 } */
 @font-face {
 font-family: "Suisse Intl Trial";
-src: url("Suisse-Intl-Trial.woff2") format("woff2"),
-url("Suisse-Intl-Trial.woff") format("woff");
+src: url("SuisseWorksTrial-Book.woff2") format("woff2"),
+url("SuisseWorksTrial-Book.woff") format("woff");
 }
 @media screen and (min-width: 750px) {
   .page-width {
@@ -3524,9 +3524,9 @@ details-disclosure > details {
   .animate--hover-vertical-lift .button:not([disabled]).button--secondary:hover:after {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
-.header__menu-item > svg.icon-caret {
+/* .header__menu-item > svg.icon-caret {
   display: none !important;
-}
+} */
 }
 
 /* TEN12-08172023 - START */

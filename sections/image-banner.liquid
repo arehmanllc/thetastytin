@@ -160,7 +160,9 @@
       {%- endfor -%}
     </div>
   </div>
-  <a href="{{ section.settings.design-deeva-link}}" class="TEN12__banner-clicker"></a>
+  {% if section.settings.design-deeva-link != blank %}
+    <a href="{{ section.settings.design-deeva-link}}" class="TEN12__banner-clicker"></a>
+  {% endif %}  
 </div>
 
 <style>
