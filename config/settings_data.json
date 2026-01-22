@@ -24,7 +24,7 @@
     "animations_hover_elements": "none",
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
-    "buttons_radius": 0,
+    "buttons_radius": 40,
     "buttons_shadow_opacity": 0,
     "buttons_shadow_horizontal_offset": 0,
     "buttons_shadow_vertical_offset": 4,
@@ -60,7 +60,7 @@
     "collection_card_color_scheme": "background-2",
     "collection_card_border_thickness": 0,
     "collection_card_border_opacity": 10,
-    "collection_card_corner_radius": 0,
+    "collection_card_corner_radius": 10,
     "collection_card_shadow_opacity": 0,
     "collection_card_shadow_horizontal_offset": 0,
     "collection_card_shadow_vertical_offset": 4,
@@ -103,13 +103,14 @@
     "drawer_shadow_horizontal_offset": 0,
     "drawer_shadow_vertical_offset": 4,
     "drawer_shadow_blur": 5,
-    "badge_position": "bottom left",
+    "badge_position": "top left",
     "badge_corner_radius": 40,
-    "sale_badge_color_scheme": "accent-2",
+    "sale_badge_color_scheme": "scheme-2835f882-0aee-472d-9c2f-c3dda7643a8a",
     "sold_out_badge_color_scheme": "inverse",
     "brand_headline": "",
-    "brand_description": "<p></p>",
-    "brand_image_width": 100,
+    "brand_description": "<p>Thoughtfully crafted seasonings and refills designed to make everyday cooking simpler, more enjoyable, and shared.</p>",
+    "brand_image": "shopify://shop_images/image_7.png",
+    "brand_image_width": 320,
     "social_facebook_link": "https://facebook.com/TheTastyTin",
     "social_instagram_link": "https://instagram.com/TheTastyTin",
     "social_youtube_link": "https://www.youtube.com/@TheTastyTin",
@@ -225,13 +226,13 @@
       },
       "background-2": {
         "settings": {
-          "background": "#0c0c0d",
+          "background": "#ffffff",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#011638",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "button": "#0c0c0d",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#0c0c0d",
+          "shadow": "#0c0c0d"
         }
       },
       "inverse": {
@@ -239,19 +240,19 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text": "#121212",
-          "button": "#ffffff",
+          "button": "#0c0c0d",
           "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "secondary_button_label": "#0c0c0d",
+          "shadow": "#0c0c0d"
         }
       },
       "accent-1": {
         "settings": {
-          "background": "#011638",
+          "background": "#0c0c0d",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#ffffff",
+          "button_label": "#000000",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
@@ -260,18 +261,18 @@
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "text": "#121212",
+          "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#ffffff",
+          "button_label": "#121212",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
       },
       "scheme-2835f882-0aee-472d-9c2f-c3dda7643a8a": {
         "settings": {
-          "background": "#ffffff",
+          "background": "#ff383c",
           "background_gradient": "",
-          "text": "#121212",
+          "text": "#ffffff",
           "button": "#011638",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",

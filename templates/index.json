@@ -23,7 +23,8 @@
           "type": "text",
           "settings": {
             "text": "For Everyday Cooking",
-            "text_style": "body"
+            "text_style": "body",
+            "sub_heading": "Small-batch seasonings and refills designed to make everyday meals easier, more flavorful, and less complicated."
           }
         },
         "button": {
@@ -51,452 +52,278 @@
         "desktop_content_position": "middle-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
-        "color_scheme": "background-1",
+        "color_scheme": "background-2",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
     },
-    "e480a12a-dc5b-4bf0-ad15-e9548489cd2e": {
-      "type": "TEN12-announcement-bar",
-      "blocks": {
-        "template--20634957414721__e480a12a-dc5b-4bf0-ad15-e9548489cd2e-announcement-1": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "✨HAPPY HOLIDAYS✨The Tasty Tin family will be on holiday hiatus till January 6, 2025!"
-          }
-        },
-        "announcement_TjMjY7": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "✹ Free Shipping on over $200"
-          }
-        }
-      },
-      "block_order": [
-        "template--20634957414721__e480a12a-dc5b-4bf0-ad15-e9548489cd2e-announcement-1",
-        "announcement_TjMjY7"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "show_line_separator": true,
-        "collection": ""
-      }
-    },
-    "5a9d24c0-4891-45dc-a123-13385d3ec484": {
-      "type": "TEN12-announcement-bar",
-      "blocks": {
-        "template--20634957414721__5a9d24c0-4891-45dc-a123-13385d3ec484-announcement-1": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "✹Feeding the world one friend at a time—handcrafted blends for soulful meals."
-          }
-        },
-        "announcement_wWRKhd": {
-          "type": "announcement",
-          "settings": {
-            "text": "✹ ✨ ✨ Free Shipping $40+ | Fast shipping available ✨✨ ✹ ✹ ✨ ✨ Free Shipping $40+ | Fast shipping available ✨✨ ✹ ✹ ✨ ✨ Free Shipping $40+ | Fast shipping available ✨✨ ✹ ✹ ✨ ✨ Free Shipping $40+ | Fast shipping available ✨✨ ✹ ✹ ✨ ✨ Free Shipping $40+ | Fast shipping available ✨✨ ✹ ✹ ✨ ✨ Free Shipping $40+ | Fast shipping available ✨✨ ✹ ✹ ✨ ✨ Free Shipping $40+ | Fast shipping available ✨✨ ✹"
-          }
-        },
-        "2467c60c-5c56-46ce-87bd-1992ec885be7": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "• Check out our fan favorites like Pryme Thyme"
-          }
-        },
-        "3f195d85-2b73-4253-ab3a-54af3fc55541": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "✹Perfect Hostess Giftsets"
-          }
-        }
-      },
-      "block_order": [
-        "template--20634957414721__5a9d24c0-4891-45dc-a123-13385d3ec484-announcement-1",
-        "announcement_wWRKhd",
-        "2467c60c-5c56-46ce-87bd-1992ec885be7",
-        "3f195d85-2b73-4253-ab3a-54af3fc55541"
-      ],
-      "settings": {
-        "color_scheme": "background-1",
-        "show_line_separator": true,
-        "collection": ""
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "New Year, New Flavor",
-        "heading_size": "h2",
-        "description": "<p>Make healthy eating delicious. Well-seasoned meals turn resolutions into habits you'll actually keep.</p>",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "shakers-refills",
-        "products_to_show": 9,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-2835f882-0aee-472d-9c2f-c3dda7643a8a",
-        "image_ratio": "square",
-        "image_shape": "parallelogram",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
-    },
-    "0855fb18-35cc-4d34-a81d-3295aefd0f26": {
-      "type": "multicolumn2",
-      "blocks": {
-        "template--20601774244161__0855fb18-35cc-4d34-a81d-3295aefd0f26-column-1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/2.png",
-            "title": "Shipping to ALL 50 States in the US",
-            "text": "<p>You order, we ship!  We do whatever we can to get your package to you, quickly.  </p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--20601774244161__0855fb18-35cc-4d34-a81d-3295aefd0f26-column-2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/4.png",
-            "title": "Recycle & Reduce & Reuse",
-            "text": "<p>We love this planet as much as we love our food.  And we will do all we can to make it last long for generations to come.  From bamboo to glass jars, we put our blends where are sustainability is.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--20601774244161__0855fb18-35cc-4d34-a81d-3295aefd0f26-column-3": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/3.png",
-            "title": "Feeding the World, One Friend",
-            "text": "<p>At a time.  Simply. We want to encourage you to make unforgettable meals at home, easily.  One blend, one food, mouthwatering results.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--20601774244161__0855fb18-35cc-4d34-a81d-3295aefd0f26-column-1",
-        "template--20601774244161__0855fb18-35cc-4d34-a81d-3295aefd0f26-column-2",
-        "template--20601774244161__0855fb18-35cc-4d34-a81d-3295aefd0f26-column-3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "half",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "0874a610-a56c-4b9e-9f5b-a6ab38bee9a7": {
-      "type": "multirow",
-      "blocks": {
-        "template--20601774244161__0874a610-a56c-4b9e-9f5b-a6ab38bee9a7-row-1": {
-          "type": "row",
-          "settings": {
-            "caption": "",
-            "heading": "Locally Made",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "template--20601774244161__0874a610-a56c-4b9e-9f5b-a6ab38bee9a7-row-2": {
-          "type": "row",
-          "settings": {
-            "caption": "",
-            "heading": "Timeless Pieces",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "template--20601774244161__0874a610-a56c-4b9e-9f5b-a6ab38bee9a7-row-3": {
-          "type": "row",
-          "settings": {
-            "caption": "⭐⭐⭐⭐⭐",
-            "heading": "Rated 4.8 Stars",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "SHOP COLLECTION",
-            "button_link": "shopify://collections"
-          }
-        }
-      },
-      "block_order": [
-        "template--20601774244161__0874a610-a56c-4b9e-9f5b-a6ab38bee9a7-row-1",
-        "template--20601774244161__0874a610-a56c-4b9e-9f5b-a6ab38bee9a7-row-2",
-        "template--20601774244161__0874a610-a56c-4b9e-9f5b-a6ab38bee9a7-row-3"
-      ],
-      "disabled": true,
-      "settings": {
-        "image_height": "adapt",
-        "desktop_image_width": "medium",
-        "heading_size": "h2",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "c503ca1e-dced-43a3-80dc-fcfa3ce41601": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--20601774244161__c503ca1e-dced-43a3-80dc-fcfa3ce41601-column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--20601774244161__c503ca1e-dced-43a3-80dc-fcfa3ce41601-column-2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "template--20601774244161__c503ca1e-dced-43a3-80dc-fcfa3ce41601-column-3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--20601774244161__c503ca1e-dced-43a3-80dc-fcfa3ce41601-column-1",
-        "template--20601774244161__c503ca1e-dced-43a3-80dc-fcfa3ce41601-column-2",
-        "template--20601774244161__c503ca1e-dced-43a3-80dc-fcfa3ce41601-column-3"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
-        "color_scheme": "background-2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "6e324b27-91f6-4360-837e-cb956eb557e0": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--21409542799646__6e324b27-91f6-4360-837e-cb956eb557e0-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Our Philosophy",
-            "heading_size": "h2"
-          }
-        },
-        "template--21409542799646__6e324b27-91f6-4360-837e-cb956eb557e0-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p></p><p>We are omnivores, carnivores, pescatarians, vegetarians and vegans.  We appreciate the farm to table mentality and the slow food movement.  Like the BlueZones, we’re trying to create our “moais” – a social circle of friends that support a healthy lifestyle created by Okinawans, wherever we may reside. </p>",
-            "text_style": "body"
-          }
-        },
-        "template--21409542799646__6e324b27-91f6-4360-837e-cb956eb557e0-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Read more",
-            "button_link": "shopify://pages/about-us",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "template--21409542799646__6e324b27-91f6-4360-837e-cb956eb557e0-heading-1",
-        "template--21409542799646__6e324b27-91f6-4360-837e-cb956eb557e0-text-1",
-        "template--21409542799646__6e324b27-91f6-4360-837e-cb956eb557e0-button-1"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/garlic-dust-large-refill-1-lb-613668.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "scheme-90f006ba-224e-4c9a-a5c4-33c7e1c6acb5",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "6fbd2842-d7b1-4364-9d45-6b6772f695b8": {
+    "collection_list_bktbkE": {
       "type": "collection-list",
       "blocks": {
-        "template--20601774244161__6fbd2842-d7b1-4364-9d45-6b6772f695b8-featured_collection-1": {
+        "featured_collection_inAAed": {
           "type": "featured_collection",
           "settings": {
             "collection": "gifts-under-20"
           }
         },
-        "template--20601774244161__6fbd2842-d7b1-4364-9d45-6b6772f695b8-featured_collection-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "shakers-refills"
-          }
-        },
-        "template--20601774244161__6fbd2842-d7b1-4364-9d45-6b6772f695b8-featured_collection-3": {
+        "featured_collection_PwVeha": {
           "type": "featured_collection",
           "settings": {
             "collection": "holiday-gift-sets"
           }
+        },
+        "featured_collection_tqT9VY": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gifts-under-100"
+          }
+        },
+        "featured_collection_DfjPhW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gifts-under-20"
+          }
         }
       },
       "block_order": [
-        "template--20601774244161__6fbd2842-d7b1-4364-9d45-6b6772f695b8-featured_collection-1",
-        "template--20601774244161__6fbd2842-d7b1-4364-9d45-6b6772f695b8-featured_collection-2",
-        "template--20601774244161__6fbd2842-d7b1-4364-9d45-6b6772f695b8-featured_collection-3"
+        "featured_collection_inAAed",
+        "featured_collection_PwVeha",
+        "featured_collection_tqT9VY",
+        "featured_collection_DfjPhW"
       ],
+      "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "title": "",
-        "heading_size": "h2",
+        "title": "<strong>Browse By Categories</strong>",
+        "sub-title": "From seasonings to refills and gift sets, made for everyday cooking.",
+        "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "scheme-90f006ba-224e-4c9a-a5c4-33c7e1c6acb5",
+        "columns_desktop": 4,
+        "color_scheme": "inverse",
         "show_view_all": true,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "03742d3a-4610-4187-86f9-51f20171322a": {
-      "type": "TEN12-image-banner",
+    "features_icons_ezYbgD": {
+      "type": "features-icons",
       "blocks": {
-        "template--20634957414721__03742d3a-4610-4187-86f9-51f20171322a-heading-1": {
+        "icon_XRDLP9": {
+          "type": "icon",
+          "settings": {
+            "url": "",
+            "heading": "Everyday Meals",
+            "heading_width": 30,
+            "text": "Designed to work across simple dinners, slow cooking, hosting, and special meals alike.",
+            "text_width": 40,
+            "image": "shopify://shop_images/Group_8.png",
+            "icon": "check_mark"
+          }
+        },
+        "icon_hFMc4r": {
+          "type": "icon",
+          "settings": {
+            "url": "",
+            "heading": "Nationwide Shipping",
+            "heading_width": 30,
+            "text": "You order, we ship! We ship to all 50 states, making it easy to order wherever you’re cooking.",
+            "text_width": 30,
+            "image": "shopify://shop_images/Subtract.png",
+            "icon": "check_mark"
+          }
+        },
+        "icon_wP7RyR": {
+          "type": "icon",
+          "settings": {
+            "url": "",
+            "heading": "Refill & Reuse",
+            "heading_width": 30,
+            "text": "Reusable glass jars with refill pouches help reduce waste and unnecessary packaging over time.",
+            "text_width": 30,
+            "image": "shopify://shop_images/Vector_1.png",
+            "icon": "check_mark"
+          }
+        },
+        "icon_DLKhKp": {
+          "type": "icon",
+          "settings": {
+            "url": "",
+            "heading": "Small-Batch Made",
+            "heading_width": 30,
+            "text": "Carefully crafted in small batches to ensure balanced flavor and consistent quality.",
+            "text_width": 30,
+            "image": "shopify://shop_images/Group_9_1.png",
+            "icon": "check_mark"
+          }
+        }
+      },
+      "block_order": [
+        "icon_XRDLP9",
+        "icon_hFMc4r",
+        "icon_wP7RyR",
+        "icon_DLKhKp"
+      ],
+      "name": "Features Icons",
+      "settings": {
+        "color_scheme": "accent-1",
+        "features_title": "Designed for Real Meals",
+        "features_para": "Built around unique flavors, reusable packaging, and everyday cooking.",
+        "section_style": "horizontal",
+        "column_alignment": "center",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "heading_size": "f-28",
+        "text_size": "f-12",
+        "padding_top": 36,
+        "padding_top_mobile": 40,
+        "padding_bottom": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "featured_collection_LK9U63": {
+      "type": "featured-collection",
+      "name": "Featured collection prime",
+      "settings": {
+        "collection": "shakers-refills",
+        "products_to_show": 10,
+        "title": "Our Signature Seasonings",
+        "heading_size": "h1",
+        "description": "<p>Seasonings made for real, everyday cooking</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "inverse",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "none",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_top_mobile": 36,
+        "padding_bottom": 36,
+        "padding_bottom_mobile": 36
+      }
+    },
+    "multirow_J4Vhbf": {
+      "type": "multirow",
+      "blocks": {
+        "row_pktq9G": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/garlic-dust-large-refill-1-lb-613668_1.png",
+            "caption": "",
+            "heading": "How we think About Food",
+            "text": "<p>We are omnivores, carnivores, pescatarians, vegetarians and vegans.  We appreciate the farm to table mentality and the slow food movement.  Like the BlueZones, we’re trying to create our “moais” – a social circle of friends that support a healthy lifestyle created by Okinawans, wherever we may reside. </p>",
+            "button_label": "Learn More",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "row_pktq9G"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-right",
+        "section_color_scheme": "accent-1",
+        "row_color_scheme": "accent-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_t3mP3e": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "heading": "Everyday cooking Recipes",
+        "heading_size": "h1",
+        "blog": "recipes",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_rhhpnj": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_8iWPJW": {
           "type": "heading",
-          "disabled": true,
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
+            "heading": "Gifts made for everyday",
+            "heading_size": "h2"
           }
         },
-        "template--20634957414721__03742d3a-4610-4187-86f9-51f20171322a-text-1": {
+        "heading_eEYgGE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Everyday Cooking",
+            "heading_size": "h0"
+          }
+        },
+        "text_gb9kzm": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "text": "",
+            "text_style": "body",
+            "sub_heading": "Thoughtful sets and bundles for home cooks, hosts, and anyone who loves good food."
           }
         },
-        "template--20634957414721__03742d3a-4610-4187-86f9-51f20171322a-buttons-1": {
+        "buttons_YLqjjn": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
+            "button_label_1": "Explore Bundles & Gifts",
+            "button_link_1": "#",
             "button_style_secondary_1": false,
-            "button_label_2": "Button label",
+            "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "template--20634957414721__03742d3a-4610-4187-86f9-51f20171322a-heading-1",
-        "template--20634957414721__03742d3a-4610-4187-86f9-51f20171322a-text-1",
-        "template--20634957414721__03742d3a-4610-4187-86f9-51f20171322a-buttons-1"
+        "heading_8iWPJW",
+        "heading_eEYgGE",
+        "text_gb9kzm",
+        "buttons_YLqjjn"
       ],
-      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "design-deeva-link": "shopify://collections",
-        "image": "shopify://shop_images/2_d1addda7-c32b-4be3-965d-e5bbd14a5c07.png",
-        "image_2": "shopify://shop_images/7.png",
+        "design-deeva-link": "",
+        "image": "shopify://shop_images/9C1A1229-D0E8-454F-AE6E-01E9998BA53A_1.png",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "accent-2",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
-    "8cfcc857-e12a-4e43-bd18-f77cc7e9b684": {
-      "type": "newsletter",
-      "blocks": {
-        "template--20601774244161__8cfcc857-e12a-4e43-bd18-f77cc7e9b684-heading-1": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1"
-          }
-        },
-        "template--20601774244161__8cfcc857-e12a-4e43-bd18-f77cc7e9b684-paragraph-1": {
-          "type": "paragraph",
-          "disabled": true,
-          "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
-          }
-        },
-        "template--20601774244161__8cfcc857-e12a-4e43-bd18-f77cc7e9b684-email_form-1": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "template--20601774244161__8cfcc857-e12a-4e43-bd18-f77cc7e9b684-heading-1",
-        "template--20601774244161__8cfcc857-e12a-4e43-bd18-f77cc7e9b684-paragraph-1",
-        "template--20601774244161__8cfcc857-e12a-4e43-bd18-f77cc7e9b684-email_form-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "accent-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
     "170062582347f8ad9b": {
@@ -528,64 +355,11 @@
         "include_margins": true
       }
     },
-    "52094c23-f351-49f6-a481-079133437071": {
-      "type": "TEN12-image-banner",
-      "blocks": {
-        "template--20680262222098__52094c23-f351-49f6-a481-079133437071-heading-1": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        },
-        "template--20680262222098__52094c23-f351-49f6-a481-079133437071-text-1": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "template--20680262222098__52094c23-f351-49f6-a481-079133437071-buttons-1": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--20680262222098__52094c23-f351-49f6-a481-079133437071-heading-1",
-        "template--20680262222098__52094c23-f351-49f6-a481-079133437071-text-1",
-        "template--20680262222098__52094c23-f351-49f6-a481-079133437071-buttons-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "design-deeva-link": "",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "1749138009c0610b67": {
       "type": "apps",
       "blocks": {
         "judge_me_reviews_featured_carousel_Hd8dtN": {
           "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": true,
           "settings": {
             "maxwidth": 1080
           }
@@ -594,6 +368,7 @@
       "block_order": [
         "judge_me_reviews_featured_carousel_Hd8dtN"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -630,18 +405,13 @@
   },
   "order": [
     "image_banner",
-    "e480a12a-dc5b-4bf0-ad15-e9548489cd2e",
-    "5a9d24c0-4891-45dc-a123-13385d3ec484",
-    "featured_collection",
-    "0855fb18-35cc-4d34-a81d-3295aefd0f26",
-    "0874a610-a56c-4b9e-9f5b-a6ab38bee9a7",
-    "c503ca1e-dced-43a3-80dc-fcfa3ce41601",
-    "6e324b27-91f6-4360-837e-cb956eb557e0",
-    "6fbd2842-d7b1-4364-9d45-6b6772f695b8",
-    "03742d3a-4610-4187-86f9-51f20171322a",
-    "8cfcc857-e12a-4e43-bd18-f77cc7e9b684",
+    "collection_list_bktbkE",
+    "features_icons_ezYbgD",
+    "featured_collection_LK9U63",
+    "multirow_J4Vhbf",
+    "featured_blog_t3mP3e",
+    "image_banner_rhhpnj",
     "170062582347f8ad9b",
-    "52094c23-f351-49f6-a481-079133437071",
     "1749138009c0610b67",
     "174924718676d8d08b"
   ]
