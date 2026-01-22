@@ -42,6 +42,7 @@
 .marquee-text {
   margin: 0;
   letter-spacing: 0rem;
+  text-transform: capitalize;
 }
 
 .marquee__icon {

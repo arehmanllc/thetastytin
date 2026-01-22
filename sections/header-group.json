@@ -55,7 +55,7 @@
       ],
       "name": "Marquee Section",
       "settings": {
-        "color_scheme": "background-2",
+        "color_scheme": "accent-1",
         "autoplay": true,
         "font_heading_family": "f-body",
         "heading_size": "h4",

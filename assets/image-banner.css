@@ -1,0 +1,16 @@
+.banner__heading > *{
+  font-size: clamp(32px, 4vw, 75px);
+  font-weight: 500;
+  color: #000000;
+}
+.banner__text > *{
+  font-size: clamp(18px, 2vw, 55px);
+  font-family: var(--font-heading-family-Suisse);
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #000000;
+}
+.banner__subheading > *{
+  color: #0C0C0D;
+  font-family:var(--font-body-family-Suisse) ;
+}

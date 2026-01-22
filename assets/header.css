@@ -1,3 +1,6 @@
-.header__menu-item{
-  font-weight: 600;
+.list-menu__item{
+  letter-spacing: 0;
+}
+.mega-menu__link{
+  letter-spacing: 0;
 }
