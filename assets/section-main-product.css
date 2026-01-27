@@ -85,7 +85,7 @@
 
 .shopify-payment-button__button {
   /* font-family: inherit; */
-  font-family: var(--font-body-family-Suisse);
+  font-family: var(--font-body-family);
   min-height: 4.6rem;
 }
 

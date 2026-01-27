@@ -35,8 +35,7 @@ body {
   max-width: var(--page-width);
   margin: 0 auto;
   flex: 1 0 auto;
-  /* font-family: var(--font-body-family); */
-  font-family: var(--font-body-family-Suisse);
+  font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
 }
@@ -55,8 +54,7 @@ h1,
 .h1,
 h2,
 .h2 {
-  /* font-family: var(--font-heading-family); */
-  font-family: var(--font-heading-family-Suisse);
+  font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
@@ -89,8 +87,7 @@ h2,
 }
 
 .button {
-  /* font-family: inherit; */
-  font-family: var(--font-body-family-Suisse);
+  font-family: inherit;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
