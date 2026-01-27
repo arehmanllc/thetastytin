@@ -37,7 +37,7 @@
               {{ section.settings.title }}
             </h2>
             {% if section.settings.sub-title != blank %}
-              <div class="sub-title">{{ section.settings.sub-title }}</div>
+              <div class="sub-title f-18">{{ section.settings.sub-title }}</div>
             {% endif %}  
           </div>
           {%- if section.settings.show_view_all and section.blocks.size < collections.size -%}
@@ -49,7 +49,7 @@
       >
         <a
           href="{{ routes.collections_url }}"
-          class="button button--primary"
+          class="button button--primary b-500"
           id="ViewAllButton-{{ section.id }}"
           aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}"
         >

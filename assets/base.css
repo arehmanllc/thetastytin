@@ -98,17 +98,11 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   margin: 0 auto;
 }
 p {
-  /* font-family: var(--font-heading-family); */
-  font-family: var(--font-heading-family-Suisse);
+  font-family: var(--font-heading-family);
 }
 .utility-bar__grid.page-width {
   padding-left: 3rem;
   padding-right: 3rem;
-}
- @font-face {
-font-family: "SuisseWorksTrial-Book";
-src: url("SuisseWorksTrial-Book.woff2") format("woff2"),
-url("SuisseWorksTrial-Book.woff") format("woff");
 }
 @media screen and (min-width: 750px) {
   .page-width {
@@ -268,7 +262,7 @@ h5,
 .h3,
 .h4,
 .h5 {
-  font-family: var(--font-heading-family-Suisse);
+  font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   letter-spacing: 0rem;
@@ -1799,7 +1793,7 @@ details[open] > .share-button__fallback {
   color: rgba(var(--color-foreground), 0.75);
   letter-spacing: -0.15px;
   line-height: 1.5;
-  font-family: var(--font-heading-family-Suisse);
+  font-family: var(--font-heading-family);
 }
 
 .field__input:focus ~ .field__label,
@@ -2318,7 +2312,7 @@ input[type="checkbox"] {
   margin: 0;
   letter-spacing: 0.1rem;
   min-height: 3.8rem;
-  font-family: var(--font-heading-family-Suisse);
+  font-family: var(--font-heading-family);
 }
 
 .announcement-bar-slider--fade-in-next .announcement-bar__message,
@@ -3747,7 +3741,11 @@ details-disclosure > details {
   font-size: var(--font-size);
   line-height: calc(var(--font-size) * 1.5);
 }
-
+ @font-face {
+font-family: "Coolvetica-Rg";
+src: url("Coolvetica-Rg.woff2") format("woff2"),
+url("Coolvetica-Rg.woff") format("woff");
+}
 .f-8 {
   --font-size: 0.8rem;
 }
@@ -3782,7 +3780,7 @@ details-disclosure > details {
   --font-size: 1.8rem;
 }
 .f-head {
-  font-family: var(--font-heading-family-Suisse);
+  font-family: var(--font-heading-family);
   font-weight: 300;
 }
 .f-body {
