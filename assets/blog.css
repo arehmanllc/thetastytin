@@ -1,0 +1,18 @@
+.blog .sub-heading--blogs{
+	color: #6E6E6E;
+	margin-top: 5px;
+}
+.blog .slider--desktop .slider__slide:first-child{
+	margin-left: 0;
+}
+.blog .blog__posts .article-card .card__information{
+	padding-inline: 0;
+}
+.blog .blog__posts .article-card .card__information .full-unstyled-link{
+	font-size: 20px;
+}
+.blog .view-recipe{
+	font-size: 18px;
+	color: #6E6E6E;
+	font-family: var(--font-body-family);
+}

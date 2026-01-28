@@ -1,0 +1,4 @@
+.multirow__inner .image-with-text__text > p{
+  font-family: var(--font-body-family);
+	color: #FCFCFC;
+}
