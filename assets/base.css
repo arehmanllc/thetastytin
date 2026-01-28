@@ -99,6 +99,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 p {
   font-family: var(--font-heading-family);
+  font-weight: 500;
 }
 .utility-bar__grid.page-width {
   padding-left: 3rem;
@@ -3778,6 +3779,9 @@ url("Coolvetica-Rg.woff") format("woff");
 }
 .f-24 {
   --font-size: 1.8rem;
+}
+.f-40 {
+  --font-size: 4rem;
 }
 .f-head {
   font-family: var(--font-heading-family);

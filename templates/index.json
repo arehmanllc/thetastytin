@@ -15,7 +15,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<em>Seasonings</em>",
+            "heading": "<em><strong>Seasonings</strong></em>",
             "heading_size": "h0"
           }
         },
@@ -47,7 +47,7 @@
       "settings": {
         "design-deeva-link": "",
         "image": "shopify://shop_images/banner_3_1.png",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 10,
         "image_height": "adapt",
         "desktop_content_position": "middle-left",
         "show_text_box": false,
@@ -95,7 +95,7 @@
       ],
       "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "title": "<strong>Browse By Categories</strong>",
+        "title": "<strong>Browse By </strong><em><strong>Categories</strong></em>",
         "sub-title": "From seasonings to refills and gift sets, made for everyday cooking.",
         "heading_size": "h1",
         "image_ratio": "square",
@@ -169,14 +169,14 @@
       "name": "Features Icons",
       "settings": {
         "color_scheme": "accent-1",
-        "features_title": "Designed for Real Meals",
+        "features_title": "<p>Designed for <em><strong>Real Meals</strong></em></p>",
         "features_para": "Built around unique flavors, reusable packaging, and everyday cooking.",
         "section_style": "horizontal",
         "column_alignment": "center",
         "columns_desktop": 4,
         "columns_mobile": "2",
         "heading_size": "f-28",
-        "text_size": "f-12",
+        "text_size": "f-15",
         "padding_top": 36,
         "padding_top_mobile": 40,
         "padding_bottom": 36,

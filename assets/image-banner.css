@@ -1,13 +1,12 @@
 .banner__heading > *{
   font-size: clamp(50px, 4vw, 75px);
-  font-weight: 500;
   color: #000000;
 }
 .banner__text{
   margin-top: 0;
 }
 .banner__text > *{
-  font-size: clamp(36px, 2vw, 55px);
+  font-size: clamp(36px, 3vw, 55px);
   font-family: var(--font-heading-family);
   font-weight: 500;
   letter-spacing: 0;
@@ -16,5 +15,8 @@
 }
 .banner__subheading > *{
   font-family:var(--font-body-family);
+  font-weight: 500;
+}
+.banner__buttons--multiple .button{
   font-weight: 500;
 }
