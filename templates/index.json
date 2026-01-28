@@ -400,11 +400,30 @@
         "desktop_content_position": "middle-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
-        "color_scheme": "accent-2",
+        "color_scheme": "scheme-2835f882-0aee-472d-9c2f-c3dda7643a8a",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
+      }
+    },
+    "featured_blog_FHwiCq": {
+      "type": "featured-blog",
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "heading": "From <em><strong>Our</strong></em> <em><strong>Blog</strong></em>",
+        "heading_size": "h1",
+        "sub_heading": "Easy ideas to help you get the most out of your seasonings.",
+        "blog": "ramblins",
+        "post_limit": 4,
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "170062582347f8ad9b": {
@@ -493,6 +512,7 @@
     "featured_blog_t3mP3e",
     "testimonials_9tHqaN",
     "image_banner_rhhpnj",
+    "featured_blog_FHwiCq",
     "170062582347f8ad9b",
     "1749138009c0610b67",
     "174924718676d8d08b"

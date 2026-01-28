@@ -113,6 +113,10 @@
 
 .facet-filters__sort + .icon-caret {
   right: 0;
+  position: absolute;
+    height: .6rem;
+    right: 1.5rem;
+    top: calc(50% - .2rem);
 }
 
 @media screen and (forced-colors: active) {

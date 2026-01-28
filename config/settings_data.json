@@ -110,7 +110,7 @@
     "brand_headline": "",
     "brand_description": "<p>Thoughtfully crafted seasonings and refills designed to make everyday cooking simpler, more enjoyable, and shared.</p>",
     "brand_image": "shopify://shop_images/image_7.png",
-    "brand_image_width": 320,
+    "brand_image_width": 280,
     "social_facebook_link": "https://facebook.com/TheTastyTin",
     "social_instagram_link": "https://instagram.com/TheTastyTin",
     "social_youtube_link": "https://www.youtube.com/@TheTastyTin",
@@ -270,12 +270,12 @@
       },
       "scheme-2835f882-0aee-472d-9c2f-c3dda7643a8a": {
         "settings": {
-          "background": "#ff383c",
+          "background": "#070720",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#011638",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
+          "button": "#ffffff",
+          "button_label": "#070720",
+          "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
       },

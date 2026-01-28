@@ -10,6 +10,9 @@
   padding-bottom: 5rem;
   display: block;
 }
+.footer__content-top p{
+      font-family: var(--font-body-family);
+}
 
 @media screen and (max-width: 749px) {
   .footer .grid {

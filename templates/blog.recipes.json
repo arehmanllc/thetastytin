@@ -9,6 +9,37 @@
  */
 {
   "sections": {
+    "rich_text_NrDNAf": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pce6an": {
+          "type": "heading",
+          "settings": {
+            "heading": "Everyday cooking <em><strong>Recipes and Blogs</strong></em>",
+            "heading_size": "h1"
+          }
+        },
+        "text_eWHwgy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Easy ideas to help you get the most out of your seasonings.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pce6an",
+        "text_eWHwgy"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "main": {
       "type": "main-blog",
       "settings": {
@@ -17,12 +48,48 @@
         "image_height": "medium",
         "show_date": false,
         "show_author": false,
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
+      }
+    },
+    "newsletter_EzdwtD": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_gPKFcq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_zhKRCa": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+          }
+        },
+        "email_form_dd7Had": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_gPKFcq",
+        "paragraph_zhKRCa",
+        "email_form_dd7Had"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
-    "main"
+    "rich_text_NrDNAf",
+    "main",
+    "newsletter_EzdwtD"
   ]
 }
