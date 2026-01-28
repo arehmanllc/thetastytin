@@ -529,7 +529,7 @@
       </form>
     </facet-filters-form>
     {% comment %} Sorting for vertical filter are grouped with filter when no JS{% endcomment %}
-    {%- if enable_sorting and filter_type == 'vertical' -%}
+    {% comment %} {%- if enable_sorting and filter_type == 'vertical' -%}
       <facet-filters-form class="small-hide">
         <form class="no-js">
           <div class="facet-filters sorting caption">
@@ -577,7 +577,7 @@
           {%- endif -%}
         </form>
       </facet-filters-form>
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
   {%- endif -%}
   {% comment %}  Drawer and mobile filter {% endcomment %}
   <menu-drawer

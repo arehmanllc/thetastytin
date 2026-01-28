@@ -10,8 +10,7 @@
 }
 .blog .blog__posts .article-card .card__information .full-unstyled-link{
 	font-size: 20px;
-}
-.blog .view-recipe{
+}.view-recipe{
 	font-size: 18px;
 	color: #6E6E6E;
 	font-family: var(--font-body-family);
