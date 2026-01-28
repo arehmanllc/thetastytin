@@ -12,7 +12,7 @@
     "logo": "shopify://shop_images/Tasty_Tin_Black_Registered_70b9005a-cf25-4471-a17f-6931c44a2994.png",
     "logo_width": 100,
     "favicon": "shopify://shop_images/Tasty_Tin_2023_-_color_combo_4.png",
-    "type_header_font": "roboto_n4",
+    "type_header_font": "playfair_display_n4",
     "heading_scale": 100,
     "type_body_font": "roboto_n4",
     "body_scale": 100,
@@ -239,7 +239,7 @@
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "text": "#121212",
+          "text": "#ffffff",
           "button": "#0c0c0d",
           "button_label": "#ffffff",
           "secondary_button_label": "#0c0c0d",
@@ -248,7 +248,7 @@
       },
       "accent-1": {
         "settings": {
-          "background": "#011638",
+          "background": "#070720",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
