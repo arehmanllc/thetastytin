@@ -374,6 +374,7 @@
 
 .card-information > .price {
   color: rgb(var(--color-foreground));
+  font-size: 18px;
 }
 
 .card--horizontal .card-information > .price {
