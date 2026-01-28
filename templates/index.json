@@ -222,7 +222,7 @@
           "settings": {
             "image": "shopify://shop_images/garlic-dust-large-refill-1-lb-613668_1.png",
             "caption": "",
-            "heading": "How we think About Food",
+            "heading": "How we think <em><strong>About Food</strong></em>",
             "text": "<p>We are omnivores, carnivores, pescatarians, vegetarians and vegans.  We appreciate the farm to table mentality and the slow food movement.  Like the BlueZones, we’re trying to create our “moais” – a social circle of friends that support a healthy lifestyle created by Okinawans, wherever we may reside. </p>",
             "button_label": "Learn More",
             "button_link": "#"
@@ -253,16 +253,97 @@
       "type": "featured-blog",
       "name": "t:sections.featured-blog.presets.name",
       "settings": {
-        "heading": "Everyday cooking Recipes",
+        "heading": "<strong>Everyday cooking</strong> <em><strong>Recipes</strong></em>",
         "heading_size": "h1",
+        "sub_heading": "Easy ideas to help you get the most out of your seasonings.",
         "blog": "recipes",
-        "post_limit": 3,
+        "post_limit": 4,
         "columns_desktop": 3,
-        "color_scheme": "",
+        "color_scheme": "background-1",
         "show_image": true,
-        "show_date": true,
+        "show_date": false,
         "show_author": false,
         "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "testimonials_9tHqaN": {
+      "type": "testimonials",
+      "blocks": {
+        "column_8JxNMX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_35675.png",
+            "star": "shopify://shop_images/Vector_1_47e4a917-68f0-49e7-8237-6155f5077576.png",
+            "star_size": 1,
+            "title": "Julia W. this week",
+            "text": "<p>I use Garlic Dust almost daily. It makes simple meals taste finished without needing anything extra</p>",
+            "author": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_49GUbH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_35675.png",
+            "star": "shopify://shop_images/Vector_1_47e4a917-68f0-49e7-8237-6155f5077576.png",
+            "star_size": 1,
+            "title": "Julia W. this week",
+            "text": "<p>I use Garlic Dust almost daily. It makes simple meals taste finished without needing anything extra</p>",
+            "author": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8CbAFr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/DSC_9590_1.png",
+            "star_size": 1,
+            "title": "Dawn K. this week",
+            "text": "<p>The refills are such a good idea. Same great flavor, less waste, and really easy to restock.</p>",
+            "author": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YVgeJq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Frame_35675.png",
+            "star": "shopify://shop_images/Vector_1_47e4a917-68f0-49e7-8237-6155f5077576.png",
+            "star_size": 1,
+            "title": "Julia W. this week",
+            "text": "<p>I use Garlic Dust almost daily. It makes simple meals taste finished without needing anything extra</p>",
+            "author": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_8JxNMX",
+        "column_49GUbH",
+        "column_8CbAFr",
+        "column_YVgeJq"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "title": "Loved in everyday kitchens",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "enable_desktop_slider": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -410,6 +491,7 @@
     "featured_collection_LK9U63",
     "multirow_J4Vhbf",
     "featured_blog_t3mP3e",
+    "testimonials_9tHqaN",
     "image_banner_rhhpnj",
     "170062582347f8ad9b",
     "1749138009c0610b67",
