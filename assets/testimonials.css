@@ -1,0 +1,82 @@
+.belo-multicolumn .multicolumn-card__info {
+    h3{
+        --font-size: calc(var(--font-heading-scale) * 4.2rem);
+        margin-top: 0;
+        margin-bottom: 1.8rem;
+        letter-spacing: -1.26px;
+    }
+    .author h4{
+        font-size: calc(var(--font-heading-scale) * 2.4rem);
+        line-height: 24px;
+        letter-spacing: -0.72px;
+        margin: 1.9rem 0;
+    }
+}
+.belo-multicolumn .multicolumn-card__info p{
+       font-family: var(--font-body-family); 
+}
+.belo-multicolumn .multicolumn-card{
+  text-align: center;
+}
+.belo-multicolumn .title{
+      font-size: clamp(36px, 5vw, 60px);
+    text-align: center;
+    font-family: var(--font-heading-fontspring);
+    width: 100%;
+}
+.belo-multicolumn .multicolumn-list__item .media--adapt .multicolumn-card__image{
+  width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.belo-multicolumn .multicolumn-list__item{
+  border: 2px solid #070720;
+  border-radius: 6px;
+}
+.belo-multicolumn .author > *{
+  font-size: 18px;
+  color: #949494;
+}
+.belo-multicolumn .multicolumn-card__info{
+  letter-spacing: -0.72px;
+}
+.belo-multicolumn .slider-button{
+  background-color: #ffffff73;
+    box-shadow: 0 2px 5px #47454580;
+    border-radius: 50%;
+    flex: unset;
+}
+.belo-multicolumn .multicolumn-card__image-wrapper{
+    display: grid;
+    grid-template-columns: 55px auto;
+    gap: 3.5rem;
+}
+.testimonials-stars-name{
+    text-align: left;
+}
+.testimonials-stars-name .inline-richtext{
+    font-family: var(--font-body-family);
+}
+.belo-multicolumn .slider-button .icon{
+  height: 100%;
+}
+ .belo-multicolumn .slider-buttons {
+  gap: 10px;
+ }
+@media screen and (min-width:990px) {
+    .belo-multicolumn .slider--desktop .grid__item {
+        width: calc((100% - var(--desktop-margin-left-first-item)) / 2 - var(--grid-desktop-horizontal-spacing) * 2) !important;
+    }
+    .belo-multicolumn .slider--desktop .slider__slide:first-child {
+        margin-left: 0;
+    }
+    .belo-multicolumn .slider-buttons {
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: -1%;
+    width: 102%;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+}

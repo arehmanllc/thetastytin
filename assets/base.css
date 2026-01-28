@@ -1254,12 +1254,13 @@ button.shopify-payment-button__button--unbranded {
   padding: 0 3rem;
   cursor: pointer;
   font: inherit;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-decoration: none;
   color: rgb(var(--color-button-text));
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
+  font-weight: 500;
   background-color: rgba(var(--color-button), var(--alpha-button-background));
 }
 

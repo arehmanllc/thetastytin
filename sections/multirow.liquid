@@ -1,4 +1,5 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'multirow.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -80,7 +81,7 @@
                 </p>
               {%- endif -%}
               {%- if block.settings.heading -%}
-                <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte">
+                <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte b-500">
                   {{ block.settings.heading }}
                 </h2>
               {%- endif -%}
