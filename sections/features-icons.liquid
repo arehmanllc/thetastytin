@@ -19,7 +19,7 @@
     <div class="features-text">
       {% if section.settings.features_title != blank %}
         <div class="features-title">
-          <h2>{{ section.settings.features_title }}</h2>
+          <h2 class="f-40">{{ section.settings.features_title }}</h2>
         </div>
       {% endif %}  
       {% if section.settings.features_para != blank %}
@@ -43,7 +43,7 @@
           {% if block.settings.heading or block.settings.text %}
             <div class="ft-icons__content">
               {% if block.settings.heading %}
-                <h2 class="{{ section.settings.heading_size }} f-heading b-300" style="--max-width: {{ block.settings.heading_width }}rem;">
+                <h2 class="{{ section.settings.heading_size }} f-heading b-500" style="--max-width: {{ block.settings.heading_width }}rem;">
                   {{ block.settings.heading }}
                 </h2>
               {% endif %}
@@ -70,7 +70,7 @@
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
         },{
-      "type": "text",
+      "type": "richtext",
       "id": "features_title",
       "label": "Heading"
     },{

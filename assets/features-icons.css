@@ -29,12 +29,18 @@
 .ft-icons__content>p {
   margin-top: 0.55rem;
 }
-
+.features-icons .features-title *{
+  margin-bottom: 10px;
+}
 .features-icons .center .ft-icons__content>* {
   margin-left: auto;
   margin-right: auto;
+  font-family: var(--font-body-family);
 }
-
+.features-icons .center .ft-icons__content p{
+  font-weight: 400;
+  line-height: 20px;
+}
 .ft-icons__content>p,
 .ft-icons__content>h2 {
   max-width: var(--max-width);

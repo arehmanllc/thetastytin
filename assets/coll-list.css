@@ -60,3 +60,12 @@
     width: 100%;
     align-items: center;
 }
+.collection-list-wrapper .card__media::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 7, 32, 0.2);
+}
