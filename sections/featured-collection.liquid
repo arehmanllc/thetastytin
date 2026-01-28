@@ -8,14 +8,11 @@
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
 
-{%- unless section.settings.quick_add == 'none' -%}
+
   {{ 'quick-add.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-{%- endunless -%}
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 
-{%- if section.settings.quick_add == 'standard' -%}
-  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
 
 {%- if section.settings.quick_add == 'bulk' -%}
   <script src="{{ 'quick-add-bulk.js' | asset_url }}" defer="defer"></script>
@@ -68,12 +65,12 @@
   class="color-{{ section.settings.color_scheme }} isolate gradient"
 >
   <div
-    class="page-width-desktop ft-collection collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %} page-width"
+    class="ft-collection collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %} page-width"
     id="collection-{{ section.id }}"
     data-id="{{ section.id }}"
   >
     <div class="collection__title sm:center {% if section.settings.show_view_all and more_in_collection %} collection__title--grid {% endif %}title-wrapper title-wrapper--no-top-margin{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
-    <div class="ft-coll-title-area page-width">
+    <div class="ft-coll-title-area">
       <div class="ft-title-desc">
         {%- if section.settings.title != blank -%}
           <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">

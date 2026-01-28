@@ -35,6 +35,8 @@
 }
 .collection-list .card__heading{
   height: 100%;
+  z-index: 1;
+  position: relative;
 }
 .collection-list .card__information{
   padding-top: 0;

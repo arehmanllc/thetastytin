@@ -50,6 +50,9 @@
 
 .collection__description > * {
   margin: 0;
+  font-size: 18px;
+  color: #6E6E6E;
+  font-family: var(--font-body-family);
 }
 
 .collection__title.title-wrapper {
